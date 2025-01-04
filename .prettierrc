@@ -1,0 +1,7 @@
+{
+  "jsonRecursiveSort": true,
+  "plugins": ["prettier-plugin-sort-json", "prettier-plugin-tailwindcss"],
+  "tabWidth": 2,
+  "tailwindFunctions": ["cva", "clsx", "cn"],
+  "tailwindStylesheet": "./src/app/globals.css"
+}
