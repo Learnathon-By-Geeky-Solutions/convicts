@@ -1,6 +1,6 @@
-import nextJest from "next/jest.js";
+import nextJest from "next/jest.js"
 
-const createJestConfig = nextJest();
+const createJestConfig = nextJest()
 
 /** @type {import('jest').Config} */
 const config = {
@@ -11,6 +11,6 @@ const config = {
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
   },
-};
+}
 
-export default createJestConfig(config);
+export default createJestConfig(config)
