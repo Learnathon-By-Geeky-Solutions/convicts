@@ -1,5 +1,5 @@
 {
-  "endOfLine": "crlf",
+  "endOfLine": "lf",
   "jsonRecursiveSort": true,
   "plugins": ["prettier-plugin-sort-json", "prettier-plugin-tailwindcss"],
   "semi": false,
