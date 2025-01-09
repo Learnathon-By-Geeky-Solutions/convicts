@@ -11,6 +11,7 @@ const config = {
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
   },
+  prettierPath: "<rootDir>/node_modules/prettier",
 }
 
 export default createJestConfig(config)
