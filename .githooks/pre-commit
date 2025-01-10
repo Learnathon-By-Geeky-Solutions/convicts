@@ -73,8 +73,11 @@ fi
 # if there are unstaged changes abort commit
 if ! git diff --quiet
 then
-	echo "${RED}error:$RST there are unstaged changes"
-	echo "aborting commit."
+	cat << EOF
+${RED}error:$RST there are unstaged files
+  (use "git restore <file>..." to discard changes in working directory)
+  (use "git stash" to put the changes away for later application)
+EOF
 	exit 1
 fi
 
