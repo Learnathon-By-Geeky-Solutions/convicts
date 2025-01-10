@@ -9,10 +9,10 @@
 
 if git rev-parse --verify HEAD >/dev/null 2>&1
 then
-	against=HEAD
+  against=HEAD
 else
-	# Initial commit: diff against an empty tree object
-	against=$(git hash-object -t tree /dev/null)
+  # Initial commit: diff against an empty tree object
+  against=$(git hash-object -t tree /dev/null)
 fi
 
 # If you want to allow non-ASCII filenames set this variable to true.
@@ -22,13 +22,13 @@ allownonascii=$(git config --type=bool hooks.allownonascii)
 # them from being added to the repository. We exploit the fact that the
 # printable range starts at the space character and ends with tilde.
 if [ "$allownonascii" != "true" ] &&
-	# Note that the use of brackets around a tr range is ok here, (it's
-	# even required, for portability to Solaris 10's /usr/bin/tr), since
-	# the square bracket bytes happen to fall in the designated range.
-	test $(git diff-index --cached --name-only --diff-filter=A -z $against |
-	  LC_ALL=C tr -d '[ -~]\0' | wc -c) != 0
+  # Note that the use of brackets around a tr range is ok here, (it's
+  # even required, for portability to Solaris 10's /usr/bin/tr), since
+  # the square bracket bytes happen to fall in the designated range.
+  test $(git diff-index --cached --name-only --diff-filter=A -z $against |
+    LC_ALL=C tr -d '[ -~]\0' | wc -c) != 0
 then
-	cat <<EOF
+  cat <<EOF
 Error: Attempt to add a non-ASCII file name.
 
 This can cause problems if you want to work with people on other platforms.
@@ -39,7 +39,7 @@ If you know what you are doing you can disable this check using:
 
   git config hooks.allownonascii true
 EOF
-	exit 1
+  exit 1
 fi
 
 # If there are whitespace errors, print the offending file names and fail.
@@ -47,8 +47,8 @@ out=$(git diff-index --check --cached $against --)
 
 if [ $? -ne 0 ]
 then
-	echo "$out"
-	exit 1
+  echo "$out"
+  exit 1
 fi
 
 # orpheus's code goes here
@@ -67,18 +67,18 @@ eslint="./node_modules/.bin/eslint"
 # it could be a commit with --allow-empty
 if git diff --staged --quiet
 then
-	exit 0
+  exit 0
 fi
 
 # if there are unstaged changes abort commit
 if ! git diff --quiet
 then
-	cat << EOF
+  cat << EOF
 ${RED}error:$RST there are unstaged files
   (use "git restore <file>..." to discard changes in working directory)
   (use "git stash" to put the changes away for later application)
 EOF
-	exit 1
+  exit 1
 fi
 
 # get all staged files, (except deleted files,
@@ -88,15 +88,15 @@ files=$(git diff --staged --name-only --diff-filter="ACMR")
 # exit early if theres no such staged changes
 if [ -z "$files" ]
 then
-	exit 0
+  exit 0
 fi
 
 # run prettier on all staged files
 if [ ! -x $prettier ]
 then
-	echo "${RED}error:$RST prettier is not installed"
-	echo "aborting commit."
-	exit 1
+  echo "${RED}error:$RST prettier is not installed"
+  echo "aborting commit."
+  exit 1
 fi
 
 echo "running prettier on staged files 🧙"
@@ -106,8 +106,8 @@ out=$(echo "$files" | xargs $prettier -wlu)
 
 if [ "$out" ]
 then
-	echo "$out" | sed 's| |\\ |g' | xargs git add -v |
-		sed "s|^add '\\(.*\\)'|$GREEN - $RST\1|"
+  echo "$out" | sed 's| |\\ |g' | xargs git add -v |
+    sed "s|^add '\\(.*\\)'|$GREEN - $RST\1|"
 fi
 
 echo "all files are looking pretty ✅"
@@ -115,9 +115,9 @@ echo "all files are looking pretty ✅"
 # run eslint on all staged files
 if [ ! -x $eslint ]
 then
-	echo "${RED}error:$RST eslint is not installed"
-	echo "aborting commit."
-	exit 1
+  echo "${RED}error:$RST eslint is not installed"
+  echo "aborting commit."
+  exit 1
 fi
 
 echo "eslint is checking all staged files..."
@@ -125,12 +125,12 @@ out=$(echo "$files" | xargs -r $eslint --color --no-warn-ignored)
 
 if [ $? -eq 0 ]
 then
-	echo "all checks passed ✅"
-	exit 0
+  echo "all checks passed ✅"
+  exit 0
 fi
 
 echo "$out" | head -n -1 |
-	sed "\$s|.*(\(.*\) error, \(.*\) warnings).*|$CYAN\1 error \2 warnings$RST|"
+  sed "\$s|.*(\(.*\) error, \(.*\) warnings).*|$CYAN\1 error \2 warnings$RST|"
 
 echo "fix linting errors and try again"
 echo "aborting commit."
