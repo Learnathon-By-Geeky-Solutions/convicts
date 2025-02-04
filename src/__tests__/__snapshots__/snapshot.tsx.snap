@@ -2,15 +2,10 @@
 
 exports[`renders homepage unchanged 1`] = `
 <div>
-  <div>
-    <h1>
-      Home
-    </h1>
-    <a
-      href="/about"
-    >
-      About
-    </a>
-  </div>
+  <h1
+    class="text-2xl"
+  >
+    Home
+  </h1>
 </div>
 `;
