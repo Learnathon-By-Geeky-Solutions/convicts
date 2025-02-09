@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils"
 
 const Input = (
   { className, type, ...props }: React.ComponentProps<"input">,
-  ref: React.Ref<HTMLInputElement>,
+  ref?: React.Ref<HTMLInputElement>,
 ) => (
   <input
     type={type}

@@ -20,14 +20,17 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-50",
         link: "text-zinc-900 underline-offset-4 hover:underline dark:text-zinc-50",
-        custom:
-          "rounded-lg bg-gray-800 px-4 py-2 text-white hover:rounded-2xl hover:bg-gray-200 hover:text-black",
+        custom_black:
+          "bg-zinc-950 text-white shadow-sm transition-colors duration-100 hover:border-2 hover:border-lime-500 active:bg-lime-500",
+        custom_lime:
+          "bg-lime-500 text-white shadow-sm transition-colors duration-100 hover:border-2 hover:border-zinc-950 active:bg-zinc-950",
       },
       size: {
         default: "h-9 px-4 py-2",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",
         icon: "h-9 w-9",
+        xlg: "h-14 rounded-2xl px-8",
       },
     },
     defaultVariants: {
