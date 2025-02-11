@@ -21,9 +21,9 @@ const buttonVariants = cva(
           "hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-50",
         link: "text-zinc-900 underline-offset-4 hover:underline dark:text-zinc-50",
         custom_black:
-          "bg-zinc-950 text-white shadow-sm transition-colors duration-100 hover:border-2 hover:border-lime-500 active:bg-lime-500",
+          "bg-zinc-950 text-zinc-50 shadow-sm transition-colors duration-100 hover:border-2 hover:border-lime-500 active:bg-lime-500",
         custom_lime:
-          "bg-lime-500 text-white shadow-sm transition-colors duration-100 hover:border-2 hover:border-zinc-950 active:bg-zinc-950",
+          "bg-lime-500 text-zinc-50 shadow-sm transition-colors duration-100 hover:border-2 hover:border-zinc-950 active:bg-zinc-950",
       },
       size: {
         default: "h-9 px-4 py-2",

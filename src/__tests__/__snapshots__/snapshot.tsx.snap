@@ -3,7 +3,7 @@
 exports[`renders intro page unchanged 1`] = `
 <div>
   <div
-    class="className"
+    class="mx-auto w-max max-w-sm className"
   >
     <div
       class="flex flex-col items-center"
@@ -26,13 +26,17 @@ exports[`renders intro page unchanged 1`] = `
         Find, Park, Go! Hassle-free parking at your fingertips.
       </p>
       <button
-        class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-zinc-300 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-zinc-900 text-zinc-50 shadow hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90 h-9 px-4 py-2 my-[4rem] uppercase"
+        class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-zinc-300 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-zinc-950 text-zinc-50 shadow-sm transition-colors duration-100 hover:border-2 hover:border-lime-500 active:bg-lime-500 h-9 px-4 py-2 my-[4rem] uppercase"
       >
-        Get Started
+        <a
+          href="/login"
+        >
+          Get Started
+        </a>
       </button>
     </div>
     <div
-      class="shrink-0 bg-zinc-200 dark:bg-zinc-800 h-[1px] mx-auto w-[90%] border-2 border-lime-500"
+      class="shrink-0 bg-zinc-200 dark:bg-zinc-800 h-[1px] w-full border-2 border-lime-500"
       data-orientation="horizontal"
       role="none"
     />
@@ -57,7 +61,7 @@ exports[`renders intro page unchanged 1`] = `
       </p>
     </div>
     <div
-      class="shrink-0 bg-zinc-200 dark:bg-zinc-800 h-[1px] mx-auto w-[90%] border-2 border-lime-500"
+      class="shrink-0 bg-zinc-200 dark:bg-zinc-800 h-[1px] w-full border-2 border-lime-500"
       data-orientation="horizontal"
       role="none"
     />
@@ -82,7 +86,7 @@ exports[`renders intro page unchanged 1`] = `
       </p>
     </div>
     <div
-      class="shrink-0 bg-zinc-200 dark:bg-zinc-800 h-[1px] mx-auto w-[90%] border-2 border-lime-500"
+      class="shrink-0 bg-zinc-200 dark:bg-zinc-800 h-[1px] w-full border-2 border-lime-500"
       data-orientation="horizontal"
       role="none"
     />
@@ -107,7 +111,7 @@ exports[`renders intro page unchanged 1`] = `
       </p>
     </div>
     <div
-      class="shrink-0 bg-zinc-200 dark:bg-zinc-800 h-[1px] mx-auto w-[90%] border-2 border-lime-500"
+      class="shrink-0 bg-zinc-200 dark:bg-zinc-800 h-[1px] w-full border-2 border-lime-500"
       data-orientation="horizontal"
       role="none"
     />
@@ -119,11 +123,12 @@ exports[`renders intro page unchanged 1`] = `
       >
         And more
       </h2>
-      <button
-        class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-zinc-300 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-zinc-900 text-zinc-50 shadow hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90 h-9 px-4 py-2 mb-[8rem] uppercase"
+      <a
+        class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-zinc-300 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-zinc-950 text-zinc-50 shadow-sm transition-colors duration-100 hover:border-2 hover:border-lime-500 active:bg-lime-500 h-9 px-4 py-2 mb-[8rem] uppercase"
+        href="/login"
       >
         Get Started
-      </button>
+      </a>
     </div>
   </div>
 </div>

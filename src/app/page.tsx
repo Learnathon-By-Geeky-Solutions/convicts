@@ -14,7 +14,7 @@ const jost = Jost()
 
 export default function Page() {
   return (
-    <div className={`${jost.className}`}>
+    <div className={`mx-auto w-max max-w-sm ${jost.className}`}>
       <div className="flex flex-col items-center">
         <Avatar className="mt-[4rem] aspect-square h-auto w-max rounded-lg border-4 border-zinc-950">
           <AvatarImage src="" />
@@ -28,13 +28,11 @@ export default function Page() {
           Carlander
         </h1>
         <p>Find, Park, Go! Hassle-free parking at your fingertips.</p>
-        <Link href="/login">
-          <Button variant="custom_black" className="my-[4rem] uppercase">
-            Get Started
-          </Button>
-        </Link>
+        <Button variant="custom_black" className="my-[4rem] uppercase">
+          <Link href="/login">Get Started</Link>
+        </Button>
       </div>
-      <Separator className="mx-auto w-[90%] border-2 border-lime-500" />
+      <Separator className="border-2 border-lime-500" />
 
       <div className="flex flex-col items-center">
         <Image
@@ -48,7 +46,7 @@ export default function Page() {
           50+ parking locations available for booking.
         </p>
       </div>
-      <Separator className="mx-auto w-[90%] border-2 border-lime-500" />
+      <Separator className="border-2 border-lime-500" />
 
       <div className="flex flex-col items-center">
         <Image
@@ -60,7 +58,7 @@ export default function Page() {
         />
         <p className="mb-11">Book a spot on the go!</p>
       </div>
-      <Separator className="mx-auto w-[90%] border-2 border-lime-500" />
+      <Separator className="border-2 border-lime-500" />
 
       <div className="flex flex-col items-center">
         <Image
@@ -74,17 +72,15 @@ export default function Page() {
           Multiple payment options including payment apps and card.
         </p>
       </div>
-      <Separator className="mx-auto w-[90%] border-2 border-lime-500" />
+      <Separator className="border-2 border-lime-500" />
 
       <div className="flex flex-col items-center">
         <h2 className="mb-[3.5rem] mt-[4rem] indent-[.3em] text-2xl uppercase tracking-[.3em]">
           And more
         </h2>
-        <Link href="/login">
-          <Button variant="custom_black" className="my-[8rem] uppercase">
-            Get Started
-          </Button>
-        </Link>
+        <Button variant="custom_black" asChild className="mb-[8rem] uppercase">
+          <Link href="/login">Get Started</Link>
+        </Button>
       </div>
     </div>
   )
