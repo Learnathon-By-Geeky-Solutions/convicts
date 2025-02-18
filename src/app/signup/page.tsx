@@ -1,12 +1,13 @@
-import { Avatar, AvatarImage, AvatarFallback } from "@/ui/avatar"
 import { Inter, Itim, Jost } from "next/font/google"
-import { Button } from "@/ui/button"
-import Image from "next/image"
-import { Separator } from "@/ui/separator"
 import Form from "next/form"
-import { Label } from "@/ui/label"
-import { Input } from "@/ui/input"
+import Image from "next/image"
 import Link from "next/link"
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/ui/avatar"
+import { Button } from "@/ui/button"
+import { Input } from "@/ui/input"
+import { Label } from "@/ui/label"
+import { Separator } from "@/ui/separator"
 
 const itim = Itim({
   weight: "400",

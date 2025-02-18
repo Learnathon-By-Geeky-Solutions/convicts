@@ -1,11 +1,12 @@
 "use client"
 
+import { Itim, Jost } from "next/font/google"
+import Image from "next/image"
+import Link from "next/link"
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/ui/avatar"
 import { Button } from "@/ui/button"
 import { Input } from "@/ui/input"
-import Link from "next/link"
-import { Itim, Jost } from "next/font/google"
-import { Avatar, AvatarImage, AvatarFallback } from "@/ui/avatar"
-import Image from "next/image"
 
 const itim = Itim({
   weight: "400",
