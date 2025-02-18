@@ -7,6 +7,9 @@ settings:
 importers:
   .:
     dependencies:
+      "@prisma/client":
+        specifier: 6.3.1
+        version: 6.3.1(prisma@6.3.1(typescript@5.7.2))(typescript@5.7.2)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -89,12 +92,21 @@ importers:
       prettier:
         specifier: 3.4.2
         version: 3.4.2
+      prettier-plugin-prisma:
+        specifier: ^5.0.0
+        version: 5.0.0(prettier@3.4.2)
       prettier-plugin-sort-json:
         specifier: ^4.0.0
         version: 4.0.0(prettier@3.4.2)
+      prettier-plugin-sql:
+        specifier: ^0.18.1
+        version: 0.18.1(prettier@3.4.2)
       prettier-plugin-tailwindcss:
         specifier: ^0.6.9
         version: 0.6.9(@ianvs/prettier-plugin-sort-imports@4.4.1(prettier@3.4.2))(prettier@3.4.2)
+      prisma:
+        specifier: ^6.3.1
+        version: 6.3.1(typescript@5.7.2)
       supabase:
         specifier: ^2.12.1
         version: 2.12.1
@@ -969,6 +981,57 @@ packages:
       }
     engines: { node: ">=14" }
 
+  "@prisma/client@6.3.1":
+    resolution:
+      {
+        integrity: sha512-ARAJaPs+eBkemdky/XU3cvGRl+mIPHCN2lCXsl5Vlb0E2gV+R6IN7aCI8CisRGszEZondwIsW9Iz8EJkTdykyA==,
+      }
+    engines: { node: ">=18.18" }
+    peerDependencies:
+      prisma: "*"
+      typescript: ">=5.1.0"
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+      typescript:
+        optional: true
+
+  "@prisma/debug@6.3.1":
+    resolution:
+      {
+        integrity: sha512-RrEBkd+HLZx+ydfmYT0jUj7wjLiS95wfTOSQ+8FQbvb6vHh5AeKfEPt/XUQ5+Buljj8hltEfOslEW57/wQIVeA==,
+      }
+
+  "@prisma/engines-version@6.3.0-17.acc0b9dd43eb689cbd20c9470515d719db10d0b0":
+    resolution:
+      {
+        integrity: sha512-R/ZcMuaWZT2UBmgX3Ko6PAV3f8//ZzsjRIG1eKqp3f2rqEqVtCv+mtzuH2rBPUC9ujJ5kCb9wwpxeyCkLcHVyA==,
+      }
+
+  "@prisma/engines@6.3.1":
+    resolution:
+      {
+        integrity: sha512-sXdqEVLyGAJ5/iUoG/Ea5AdHMN71m6PzMBWRQnLmhhOejzqAaEr8rUd623ql6OJpED4s/U4vIn4dg1qkF7vGag==,
+      }
+
+  "@prisma/fetch-engine@6.3.1":
+    resolution:
+      {
+        integrity: sha512-HOf/0umOgt+/S2xtZze+FHKoxpVg4YpVxROr6g2YG09VsI3Ipyb+rGvD6QGbCqkq5NTWAAZoOGNL+oy7t+IhaQ==,
+      }
+
+  "@prisma/get-platform@6.3.1":
+    resolution:
+      {
+        integrity: sha512-AYLq6Hk9xG73JdLWJ3Ip9Wg/vlP7xPvftGBalsPzKDOHr/ImhwJ09eS8xC2vNT12DlzGxhfk8BkL0ve2OriNhQ==,
+      }
+
+  "@prisma/prisma-schema-wasm@4.17.0-26.6b0aef69b7cdfc787f822ecd7cdc76d5f1991584":
+    resolution:
+      {
+        integrity: sha512-JFdsnSgBPN8reDTLOI9Vh/6ccCb2aD1LbY/LWQnkcIgNo6IdpzvuM+qRVbBuA6IZP2SdqQI8Lu6RL2P8EFBQUA==,
+      }
+
   "@rtsao/scc@1.1.0":
     resolution:
       {
@@ -1544,6 +1607,13 @@ packages:
         integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==,
       }
 
+  big-integer@1.6.52:
+    resolution:
+      {
+        integrity: sha512-QxD8cf2eVqJOOz63z6JIN9BzvVs/dlySa5HGSBH5xtR8dPteIRQnBxxKqkNTiT6jbDTF6jAfrd4oMcND9RGbQg==,
+      }
+    engines: { node: ">=0.6" }
+
   bin-links@5.0.0:
     resolution:
       {
@@ -1786,6 +1856,12 @@ packages:
       }
     engines: { node: ">= 0.8" }
 
+  commander@2.20.3:
+    resolution:
+      {
+        integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==,
+      }
+
   commander@4.1.1:
     resolution:
       {
@@ -2007,6 +2083,12 @@ packages:
         integrity: sha512-EjePK1srD3P08o2j4f0ExnylqRs5B9tJjcp9t1krH2qRi8CCdsYfwe9JgSLurFBWwq4uOlipzfk5fHNvwFKr8Q==,
       }
     engines: { node: ^14.15.0 || ^16.10.0 || >=18.0.0 }
+
+  discontinuous-range@1.0.0:
+    resolution:
+      {
+        integrity: sha512-c68LpLbO+7kP/b1Hr1qs8/BJ09F5khZGTxqxZuhzxpmwJKOgRFHJWIb9/KmqnqHhLdO55aOxFH/EGBvUQbL/RQ==,
+      }
 
   dlv@1.1.3:
     resolution:
@@ -2574,6 +2656,13 @@ packages:
         integrity: sha512-sTSfBjoXBp89JvIKIefqw7U2CCebsc74kiY6awiGogKtoSGbgjYE/G/+l9sF3MWFPNc9IcoOC4ODfKHfxFmp0g==,
       }
     engines: { node: ">= 0.4" }
+
+  get-stdin@8.0.0:
+    resolution:
+      {
+        integrity: sha512-sY22aA6xchAzprjyqmSEQv4UbAAzRN0L2dQB0NlN5acTTK9Don6nhoc3eAbUnpZiCANAMfd/+40kVdKfFygohg==,
+      }
+    engines: { node: ">=10" }
 
   get-stream@6.0.1:
     resolution:
@@ -3407,6 +3496,13 @@ packages:
     engines: { node: ">=6" }
     hasBin: true
 
+  jsox@1.2.121:
+    resolution:
+      {
+        integrity: sha512-9Ag50tKhpTwS6r5wh3MJSAvpSof0UBr39Pto8OnzFT32Z/pAbxAsKHzyvsyMEHVslELvHyO/4/jaQELHk8wDcw==,
+      }
+    hasBin: true
+
   jsx-ast-utils@3.3.5:
     resolution:
       {
@@ -3636,6 +3732,12 @@ packages:
     engines: { node: ">=10" }
     hasBin: true
 
+  moo@0.5.2:
+    resolution:
+      {
+        integrity: sha512-iSAJLHYKnX41mKcJKjqvnAN9sf0LMDTXDEvFv+ffuRR9a1MIuXLjMNL6EsnDHSkKLTWNqQQ5uo61P4EbU4NU+Q==,
+      }
+
   ms@2.1.3:
     resolution:
       {
@@ -3661,6 +3763,13 @@ packages:
       {
         integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==,
       }
+
+  nearley@2.20.1:
+    resolution:
+      {
+        integrity: sha512-+Mc8UaAebFzgV+KpI5n7DasuuQCHA89dmwm7JXw3TV43ukfNQ9DnBH3Mdb2g/I4Fdxc26pwimBWvjIw0UAILSQ==,
+      }
+    hasBin: true
 
   next@15.1.3:
     resolution:
@@ -3711,6 +3820,13 @@ packages:
       {
         integrity: sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw==,
       }
+
+  node-sql-parser@4.18.0:
+    resolution:
+      {
+        integrity: sha512-2YEOR5qlI1zUFbGMLKNfsrR5JUvFg9LxIRVE+xJe962pfVLH0rnItqLzv96XVs1Y1UIR8FxsXAuvX/lYAWZ2BQ==,
+      }
+    engines: { node: ">=8" }
 
   normalize-path@3.0.0:
     resolution:
@@ -4041,6 +4157,15 @@ packages:
       }
     engines: { node: ">= 0.8.0" }
 
+  prettier-plugin-prisma@5.0.0:
+    resolution:
+      {
+        integrity: sha512-jTJV04D9+yF7ziOOMs7CJe4ijgAH7DEGjt0SAWAToGNRy1H6BEhvcKA2UQH6gC6KVW5zeeOSAvsoiDDTt9oKXg==,
+      }
+    engines: { node: ">=14", npm: ">=8" }
+    peerDependencies:
+      prettier: ">=2 || >=3"
+
   prettier-plugin-sort-json@4.0.0:
     resolution:
       {
@@ -4049,6 +4174,15 @@ packages:
     engines: { node: ">=18.0.0" }
     peerDependencies:
       prettier: ^3.0.0
+
+  prettier-plugin-sql@0.18.1:
+    resolution:
+      {
+        integrity: sha512-2+Nob2sg7hzLAKJoE6sfgtkhBZCqOzrWHZPvE4Kee/e80oOyI4qwy9vypeltqNBJwTtq3uiKPrCxlT03bBpOaw==,
+      }
+    engines: { node: ^14.18.0 || >=16.0.0 }
+    peerDependencies:
+      prettier: ^3.0.3
 
   prettier-plugin-tailwindcss@0.6.9:
     resolution:
@@ -4130,6 +4264,19 @@ packages:
       }
     engines: { node: ^14.15.0 || ^16.10.0 || >=18.0.0 }
 
+  prisma@6.3.1:
+    resolution:
+      {
+        integrity: sha512-JKCZWvBC3enxk51tY4TWzS4b5iRt4sSU1uHn2I183giZTvonXaQonzVtjLzpOHE7qu9MxY510kAtFGJwryKe3Q==,
+      }
+    engines: { node: ">=18.18" }
+    hasBin: true
+    peerDependencies:
+      typescript: ">=5.1.0"
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   proc-log@5.0.0:
     resolution:
       {
@@ -4180,6 +4327,19 @@ packages:
       {
         integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==,
       }
+
+  railroad-diagrams@1.0.0:
+    resolution:
+      {
+        integrity: sha512-cz93DjNeLY0idrCNOH6PviZGRN9GJhsdm9hpn1YCS879fj4W+x5IFJhhkRZcwVgMmFF7R82UA/7Oh+R8lLZg6A==,
+      }
+
+  randexp@0.4.6:
+    resolution:
+      {
+        integrity: sha512-80WNmd9DA0tmZrw9qQa62GPPWfuXJknrmVmLcxvq4uZBdYqb1wYoKTmnlGUchvVWe0XiLupYkBoXVOxz3C8DYQ==,
+      }
+    engines: { node: ">=0.12" }
 
   react-dom@19.0.0:
     resolution:
@@ -4322,6 +4482,13 @@ packages:
         integrity: sha512-U7WjGVG9sH8tvjW5SmGbQuui75FiyjAX72HX15DwBBwF9dNiQZRQAg9nnPhYy+TUnE0+VcrttuvNI8oSxZcocA==,
       }
     hasBin: true
+
+  ret@0.1.15:
+    resolution:
+      {
+        integrity: sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg==,
+      }
+    engines: { node: ">=0.12" }
 
   reusify@1.0.4:
     resolution:
@@ -4525,6 +4692,13 @@ packages:
       {
         integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==,
       }
+
+  sql-formatter@15.4.10:
+    resolution:
+      {
+        integrity: sha512-zQfiuxU1F/C7TNu+880BdL+fuvJTd1Kj8R0wv48dfZ27NR3z1PWvQFkH8ai/HrIy+NyvXCaZBkJHp/EeZFXSOA==,
+      }
+    hasBin: true
 
   stable-hash@0.0.4:
     resolution:
@@ -5738,6 +5912,36 @@ snapshots:
   "@pkgjs/parseargs@0.11.0":
     optional: true
 
+  "@prisma/client@6.3.1(prisma@6.3.1(typescript@5.7.2))(typescript@5.7.2)":
+    optionalDependencies:
+      prisma: 6.3.1(typescript@5.7.2)
+      typescript: 5.7.2
+
+  "@prisma/debug@6.3.1": {}
+
+  "@prisma/engines-version@6.3.0-17.acc0b9dd43eb689cbd20c9470515d719db10d0b0":
+    {}
+
+  "@prisma/engines@6.3.1":
+    dependencies:
+      "@prisma/debug": 6.3.1
+      "@prisma/engines-version": 6.3.0-17.acc0b9dd43eb689cbd20c9470515d719db10d0b0
+      "@prisma/fetch-engine": 6.3.1
+      "@prisma/get-platform": 6.3.1
+
+  "@prisma/fetch-engine@6.3.1":
+    dependencies:
+      "@prisma/debug": 6.3.1
+      "@prisma/engines-version": 6.3.0-17.acc0b9dd43eb689cbd20c9470515d719db10d0b0
+      "@prisma/get-platform": 6.3.1
+
+  "@prisma/get-platform@6.3.1":
+    dependencies:
+      "@prisma/debug": 6.3.1
+
+  "@prisma/prisma-schema-wasm@4.17.0-26.6b0aef69b7cdfc787f822ecd7cdc76d5f1991584":
+    {}
+
   "@rtsao/scc@1.1.0": {}
 
   "@rushstack/eslint-patch@1.10.4": {}
@@ -6157,6 +6361,8 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
+  big-integer@1.6.52: {}
+
   bin-links@5.0.0:
     dependencies:
       cmd-shim: 7.0.0
@@ -6296,6 +6502,8 @@ snapshots:
     dependencies:
       delayed-stream: 1.0.0
 
+  commander@2.20.3: {}
+
   commander@4.1.1: {}
 
   concat-map@0.0.1: {}
@@ -6405,6 +6613,8 @@ snapshots:
   didyoumean@1.2.2: {}
 
   diff-sequences@29.6.3: {}
+
+  discontinuous-range@1.0.0: {}
 
   dlv@1.1.3: {}
 
@@ -6904,6 +7114,8 @@ snapshots:
     dependencies:
       dunder-proto: 1.0.1
       es-object-atoms: 1.0.0
+
+  get-stdin@8.0.0: {}
 
   get-stream@6.0.1: {}
 
@@ -7613,6 +7825,8 @@ snapshots:
 
   json5@2.2.3: {}
 
+  jsox@1.2.121: {}
+
   jsx-ast-utils@3.3.5:
     dependencies:
       array-includes: 3.1.8
@@ -7719,6 +7933,8 @@ snapshots:
 
   mkdirp@3.0.1: {}
 
+  moo@0.5.2: {}
+
   ms@2.1.3: {}
 
   mz@2.7.0:
@@ -7730,6 +7946,13 @@ snapshots:
   nanoid@3.3.8: {}
 
   natural-compare@1.4.0: {}
+
+  nearley@2.20.1:
+    dependencies:
+      commander: 2.20.3
+      moo: 0.5.2
+      railroad-diagrams: 1.0.0
+      randexp: 0.4.6
 
   next@15.1.3(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
@@ -7767,6 +7990,10 @@ snapshots:
   node-int64@0.4.0: {}
 
   node-releases@2.0.19: {}
+
+  node-sql-parser@4.18.0:
+    dependencies:
+      big-integer: 1.6.52
 
   normalize-path@3.0.0: {}
 
@@ -7951,9 +8178,22 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
+  prettier-plugin-prisma@5.0.0(prettier@3.4.2):
+    dependencies:
+      "@prisma/prisma-schema-wasm": 4.17.0-26.6b0aef69b7cdfc787f822ecd7cdc76d5f1991584
+      prettier: 3.4.2
+
   prettier-plugin-sort-json@4.0.0(prettier@3.4.2):
     dependencies:
       prettier: 3.4.2
+
+  prettier-plugin-sql@0.18.1(prettier@3.4.2):
+    dependencies:
+      jsox: 1.2.121
+      node-sql-parser: 4.18.0
+      prettier: 3.4.2
+      sql-formatter: 15.4.10
+      tslib: 2.8.1
 
   prettier-plugin-tailwindcss@0.6.9(@ianvs/prettier-plugin-sort-imports@4.4.1(prettier@3.4.2))(prettier@3.4.2):
     dependencies:
@@ -7974,6 +8214,13 @@ snapshots:
       "@jest/schemas": 29.6.3
       ansi-styles: 5.2.0
       react-is: 18.3.1
+
+  prisma@6.3.1(typescript@5.7.2):
+    dependencies:
+      "@prisma/engines": 6.3.1
+    optionalDependencies:
+      fsevents: 2.3.3
+      typescript: 5.7.2
 
   proc-log@5.0.0: {}
 
@@ -7999,6 +8246,13 @@ snapshots:
   querystringify@2.2.0: {}
 
   queue-microtask@1.2.3: {}
+
+  railroad-diagrams@1.0.0: {}
+
+  randexp@0.4.6:
+    dependencies:
+      discontinuous-range: 1.0.0
+      ret: 0.1.15
 
   react-dom@19.0.0(react@19.0.0):
     dependencies:
@@ -8077,6 +8331,8 @@ snapshots:
       is-core-module: 2.16.1
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
+
+  ret@0.1.15: {}
 
   reusify@1.0.4: {}
 
@@ -8225,6 +8481,12 @@ snapshots:
   source-map@0.6.1: {}
 
   sprintf-js@1.0.3: {}
+
+  sql-formatter@15.4.10:
+    dependencies:
+      argparse: 2.0.1
+      get-stdin: 8.0.0
+      nearley: 2.20.1
 
   stable-hash@0.0.4: {}
 
