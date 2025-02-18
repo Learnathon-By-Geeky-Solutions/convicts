@@ -11,6 +11,8 @@ const prettierConfig = {
   jsonRecursiveSort: true,
   jsxSingleQuote: false,
   plugins: [
+    "prettier-plugin-sql",
+    "prettier-plugin-prisma",
     "prettier-plugin-sort-json",
     "@ianvs/prettier-plugin-sort-imports",
     "prettier-plugin-tailwindcss",
