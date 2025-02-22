@@ -12,9 +12,9 @@
   "style": "new-york",
   "tailwind": {
     "baseColor": "zinc",
-    "config": "./tailwind.config.ts",
-    "css": "./src/app/globals.css",
-    "cssVariables": true,
+    "config": "tailwind.config.ts",
+    "css": "src/app/globals.css",
+    "cssVariables": false,
     "prefix": ""
   },
   "tsx": true
