@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --ci"
+    "test": "jest --ci",
+    "supastart": "supabase start",
+    "supastop": "supabase stop"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.7.4",
@@ -22,6 +24,7 @@
     "lucide-react": "^0.471.0",
     "next": "15.1.3",
     "next-auth": "5.0.0-beta.25",
+    "nodemailer": "^6.10.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^2.6.0",
@@ -38,6 +41,7 @@
     "@types/eslint__eslintrc": "^2.1.2",
     "@types/jest": "^29.5.14",
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.17",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",

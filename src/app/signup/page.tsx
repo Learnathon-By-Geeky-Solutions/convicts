@@ -45,7 +45,6 @@ export default function Page() {
             className="h-auto rounded-xl px-[3.3rem] py-1.5"
           >
             <Image
-              className="block"
               src="/google_logo.svg"
               width={37}
               height={36}
@@ -57,7 +56,6 @@ export default function Page() {
             className="h-auto rounded-xl px-[3.3rem] py-1.5"
           >
             <Image
-              className="block"
               src="/github_logo.svg"
               width={38}
               height={37}
@@ -99,7 +97,7 @@ export default function Page() {
             className="mt-2 rounded-lg border-[3px] border-lime-500"
             type="email"
             id="email"
-            name="surname"
+            name="email"
           />
         </div>
         <div>

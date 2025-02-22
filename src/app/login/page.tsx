@@ -1,6 +1,6 @@
-"use client"
-
+import { signIn } from "@/auth"
 import { Itim, Jost } from "next/font/google"
+import Form from "next/form"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -46,8 +46,20 @@ export default function LoginPage() {
 
         {/* Social Login */}
         <div className="space-y-4">
-          <div className="grid grid-cols-2 gap-8">
-            <Button variant="custom_lime" size="xlg">
+          <Form
+            action={async (data) => {
+              "use server"
+              const provider = data.get("provider")?.toString()
+              await signIn(provider, { redirectTo: "/home" })
+            }}
+            className="grid grid-cols-2 gap-8"
+          >
+            <Button
+              variant="custom_lime"
+              size="xlg"
+              name="provider"
+              value="google"
+            >
               <Image
                 src="/google_logo.svg"
                 alt="google logo"
@@ -55,15 +67,20 @@ export default function LoginPage() {
                 height={40}
               />
             </Button>
-            <Button variant="custom_lime" size="xlg">
+            <Button
+              variant="custom_lime"
+              size="xlg"
+              name="provider"
+              value="github"
+            >
               <Image
                 src="/github_logo.svg"
-                alt="google logo"
+                alt="github logo"
                 width={40}
                 height={40}
               />
             </Button>
-          </div>
+          </Form>
 
           <div className="relative">
             <div className="absolute inset-0 flex items-center">
@@ -78,10 +95,17 @@ export default function LoginPage() {
         </div>
 
         {/* Login Form */}
-        <form className="space-y-4">
+        <Form
+          className="space-y-4"
+          action={async (data) => {
+            "use server"
+            await signIn("nodemailer", data)
+          }}
+        >
           <div className="space-y-2">
             <label className="text-sm text-gray-600">Email Address</label>
             <Input
+              name="email"
               type="email"
               className="border-lime-500 focus-visible:ring-lime-500"
               required
@@ -92,7 +116,6 @@ export default function LoginPage() {
             <Input
               type="password"
               className="border-lime-500 focus-visible:ring-lime-500"
-              required
             />
           </div>
           <Link
@@ -109,7 +132,7 @@ export default function LoginPage() {
           >
             CONTINUE
           </Button>
-        </form>
+        </Form>
 
         {/* Sign Up Link */}
         <div className="text-center text-sm text-zinc-950">
