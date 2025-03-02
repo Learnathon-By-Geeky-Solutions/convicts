@@ -4,6 +4,8 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
+  "jest.jestCommandLine": "pnpm test --",
+  "jest.runMode": "on-demand",
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.experimental.classRegex": [
     ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],

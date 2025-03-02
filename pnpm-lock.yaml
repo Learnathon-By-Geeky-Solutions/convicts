@@ -7,9 +7,24 @@ settings:
 importers:
   .:
     dependencies:
+      "@auth/prisma-adapter":
+        specifier: ^2.7.4
+        version: 2.7.4(@prisma/client@6.3.1(prisma@6.3.1(typescript@5.7.2))(typescript@5.7.2))(nodemailer@6.10.0)
       "@prisma/client":
         specifier: 6.3.1
         version: 6.3.1(prisma@6.3.1(typescript@5.7.2))(typescript@5.7.2)
+      "@radix-ui/react-avatar":
+        specifier: ^1.1.3
+        version: 1.1.3(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      "@radix-ui/react-label":
+        specifier: ^2.1.2
+        version: 2.1.2(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      "@radix-ui/react-separator":
+        specifier: ^1.1.2
+        version: 1.1.2(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      "@radix-ui/react-slot":
+        specifier: ^1.1.1
+        version: 1.1.1(@types/react@19.0.2)(react@19.0.0)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -22,6 +37,12 @@ importers:
       next:
         specifier: 15.1.3
         version: 15.1.3(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      next-auth:
+        specifier: 5.0.0-beta.25
+        version: 5.0.0-beta.25(next@15.1.3(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(nodemailer@6.10.0)(react@19.0.0)
+      nodemailer:
+        specifier: ^6.10.0
+        version: 6.10.0
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -34,6 +55,9 @@ importers:
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.17)
+      zod:
+        specifier: ^3.24.2
+        version: 3.24.2
     devDependencies:
       "@eslint/compat":
         specifier: ^1.2.4
@@ -65,6 +89,9 @@ importers:
       "@types/node":
         specifier: ^20
         version: 20.17.11
+      "@types/nodemailer":
+        specifier: ^6.4.17
+        version: 6.4.17
       "@types/react":
         specifier: ^19
         version: 19.0.2
@@ -137,6 +164,48 @@ packages:
         integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==,
       }
     engines: { node: ">=6.0.0" }
+
+  "@auth/core@0.37.2":
+    resolution:
+      {
+        integrity: sha512-kUvzyvkcd6h1vpeMAojK2y7+PAV5H+0Cc9+ZlKYDFhDY31AlvsB+GW5vNO4qE3Y07KeQgvNO9U0QUx/fN62kBw==,
+      }
+    peerDependencies:
+      "@simplewebauthn/browser": ^9.0.1
+      "@simplewebauthn/server": ^9.0.2
+      nodemailer: ^6.8.0
+    peerDependenciesMeta:
+      "@simplewebauthn/browser":
+        optional: true
+      "@simplewebauthn/server":
+        optional: true
+      nodemailer:
+        optional: true
+
+  "@auth/core@0.37.4":
+    resolution:
+      {
+        integrity: sha512-HOXJwXWXQRhbBDHlMU0K/6FT1v+wjtzdKhsNg0ZN7/gne6XPsIrjZ4daMcFnbq0Z/vsAbYBinQhhua0d77v7qw==,
+      }
+    peerDependencies:
+      "@simplewebauthn/browser": ^9.0.1
+      "@simplewebauthn/server": ^9.0.2
+      nodemailer: ^6.8.0
+    peerDependenciesMeta:
+      "@simplewebauthn/browser":
+        optional: true
+      "@simplewebauthn/server":
+        optional: true
+      nodemailer:
+        optional: true
+
+  "@auth/prisma-adapter@2.7.4":
+    resolution:
+      {
+        integrity: sha512-3T/X94R9J1sxOLQtsD3ijIZ0JGHPXlZQxRr/8NpnZBJ3KGxun/mNsZ1MwMRhTxy0mmn9JWXk7u9+xCcVn0pu3A==,
+      }
+    peerDependencies:
+      "@prisma/client": ">=2.26.0 || >=3 || >=4 || >=5"
 
   "@babel/code-frame@7.26.2":
     resolution:
@@ -974,6 +1043,12 @@ packages:
       }
     engines: { node: ">=12.4.0" }
 
+  "@panva/hkdf@1.2.1":
+    resolution:
+      {
+        integrity: sha512-6oclG6Y3PiDFcoyk8srjLfVKyMfVCKJ27JwNPViuXziFpmdz+MZnZN/aKY0JGXgYuO/VghU0jcOAZgWXZ1Dmrw==,
+      }
+
   "@pkgjs/parseargs@0.11.0":
     resolution:
       {
@@ -1031,6 +1106,142 @@ packages:
       {
         integrity: sha512-JFdsnSgBPN8reDTLOI9Vh/6ccCb2aD1LbY/LWQnkcIgNo6IdpzvuM+qRVbBuA6IZP2SdqQI8Lu6RL2P8EFBQUA==,
       }
+
+  "@radix-ui/react-avatar@1.1.3":
+    resolution:
+      {
+        integrity: sha512-Paen00T4P8L8gd9bNsRMw7Cbaz85oxiv+hzomsRZgFm2byltPFDtfcoqlWJ8GyZlIBWgLssJlzLCnKU0G0302g==,
+      }
+    peerDependencies:
+      "@types/react": "*"
+      "@types/react-dom": "*"
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+      react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      "@types/react":
+        optional: true
+      "@types/react-dom":
+        optional: true
+
+  "@radix-ui/react-compose-refs@1.1.1":
+    resolution:
+      {
+        integrity: sha512-Y9VzoRDSJtgFMUCoiZBDVo084VQ5hfpXxVE+NgkdNsjiDBByiImMZKKhxMwCbdHvhlENG6a833CbFkOQvTricw==,
+      }
+    peerDependencies:
+      "@types/react": "*"
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      "@types/react":
+        optional: true
+
+  "@radix-ui/react-context@1.1.1":
+    resolution:
+      {
+        integrity: sha512-UASk9zi+crv9WteK/NU4PLvOoL3OuE6BWVKNF6hPRBtYBDXQ2u5iu3O59zUlJiTVvkyuycnqrztsHVJwcK9K+Q==,
+      }
+    peerDependencies:
+      "@types/react": "*"
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      "@types/react":
+        optional: true
+
+  "@radix-ui/react-label@2.1.2":
+    resolution:
+      {
+        integrity: sha512-zo1uGMTaNlHehDyFQcDZXRJhUPDuukcnHz0/jnrup0JA6qL+AFpAnty+7VKa9esuU5xTblAZzTGYJKSKaBxBhw==,
+      }
+    peerDependencies:
+      "@types/react": "*"
+      "@types/react-dom": "*"
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+      react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      "@types/react":
+        optional: true
+      "@types/react-dom":
+        optional: true
+
+  "@radix-ui/react-primitive@2.0.2":
+    resolution:
+      {
+        integrity: sha512-Ec/0d38EIuvDF+GZjcMU/Ze6MxntVJYO/fRlCPhCaVUyPY9WTalHJw54tp9sXeJo3tlShWpy41vQRgLRGOuz+w==,
+      }
+    peerDependencies:
+      "@types/react": "*"
+      "@types/react-dom": "*"
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+      react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      "@types/react":
+        optional: true
+      "@types/react-dom":
+        optional: true
+
+  "@radix-ui/react-separator@1.1.2":
+    resolution:
+      {
+        integrity: sha512-oZfHcaAp2Y6KFBX6I5P1u7CQoy4lheCGiYj+pGFrHy8E/VNRb5E39TkTr3JrV520csPBTZjkuKFdEsjS5EUNKQ==,
+      }
+    peerDependencies:
+      "@types/react": "*"
+      "@types/react-dom": "*"
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+      react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      "@types/react":
+        optional: true
+      "@types/react-dom":
+        optional: true
+
+  "@radix-ui/react-slot@1.1.1":
+    resolution:
+      {
+        integrity: sha512-RApLLOcINYJA+dMVbOju7MYv1Mb2EBp2nH4HdDzXTSyaR5optlm6Otrz1euW3HbdOR8UmmFK06TD+A9frYWv+g==,
+      }
+    peerDependencies:
+      "@types/react": "*"
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      "@types/react":
+        optional: true
+
+  "@radix-ui/react-slot@1.1.2":
+    resolution:
+      {
+        integrity: sha512-YAKxaiGsSQJ38VzKH86/BPRC4rh+b1Jpa+JneA5LRE7skmLPNAyeG8kPJj/oo4STLvlrs8vkf/iYyc3A5stYCQ==,
+      }
+    peerDependencies:
+      "@types/react": "*"
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      "@types/react":
+        optional: true
+
+  "@radix-ui/react-use-callback-ref@1.1.0":
+    resolution:
+      {
+        integrity: sha512-CasTfvsy+frcFkbXtSJ2Zu9JHpN8TYKxkgJGWbjiZhFivxaeW7rMeZt7QELGVLaYVfFMsKHjb7Ak0nMEe+2Vfw==,
+      }
+    peerDependencies:
+      "@types/react": "*"
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      "@types/react":
+        optional: true
+
+  "@radix-ui/react-use-layout-effect@1.1.0":
+    resolution:
+      {
+        integrity: sha512-+FPE0rOdziWSrH9athwI1R0HDVbWlEhd+FR+aSDk4uWGmSJ9Z54sdZVDQPZAinJhJXwfT+qnj969mCsT2gfm5w==,
+      }
+    peerDependencies:
+      "@types/react": "*"
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      "@types/react":
+        optional: true
 
   "@rtsao/scc@1.1.0":
     resolution:
@@ -1143,6 +1354,12 @@ packages:
         integrity: sha512-r1bzfrm0tomOI8g1SzvCaQHo6Lcv6zu0EA+W2kHrt8dyrHQxGzBBL4kdkzIS+jBMV+EYcMAEAqXqYaLJq5rOZg==,
       }
 
+  "@types/cookie@0.6.0":
+    resolution:
+      {
+        integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==,
+      }
+
   "@types/eslint-config-prettier@6.11.3":
     resolution:
       {
@@ -1219,6 +1436,12 @@ packages:
     resolution:
       {
         integrity: sha512-Ept5glCK35R8yeyIeYlRIZtX6SLRyqMhOFTgj5SOkMpLTdw3SEHI9fHx60xaUZ+V1aJxQJODE+7/j5ocZydYTg==,
+      }
+
+  "@types/nodemailer@6.4.17":
+    resolution:
+      {
+        integrity: sha512-I9CCaIp6DTldEg7vyUTZi8+9Vo0hi1/T8gv3C89yk1rSAAzoKQ8H8ki/jBYJSFoH/BisgLP8tkZMlQ91CIquww==,
       }
 
   "@types/react-dom@19.0.2":
@@ -1880,6 +2103,13 @@ packages:
       {
         integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==,
       }
+
+  cookie@0.7.1:
+    resolution:
+      {
+        integrity: sha512-6DnInpx7SJ2AK3+CTUE/ZM0vWTUboZCegxhC2xiIydHR9jNuTAASBrfEpHhiGOZw/nX51bHt6YQl8jsGo4y/0w==,
+      }
+    engines: { node: ">= 0.6" }
 
   create-jest@29.7.0:
     resolution:
@@ -3417,6 +3647,12 @@ packages:
       }
     hasBin: true
 
+  jose@5.9.6:
+    resolution:
+      {
+        integrity: sha512-AMlnetc9+CV9asI19zHmrgS/WYsWUwCn2R7RzlbJWD7F9eWYUTGyBmU9o6PxngtLGOiDGPRu+Uc4fhKzbpteZQ==,
+      }
+
   js-tokens@4.0.0:
     resolution:
       {
@@ -3771,6 +4007,25 @@ packages:
       }
     hasBin: true
 
+  next-auth@5.0.0-beta.25:
+    resolution:
+      {
+        integrity: sha512-2dJJw1sHQl2qxCrRk+KTQbeH+izFbGFPuJj5eGgBZFYyiYYtvlrBeUw1E/OJJxTRjuxbSYGnCTkUIRsIIW0bog==,
+      }
+    peerDependencies:
+      "@simplewebauthn/browser": ^9.0.1
+      "@simplewebauthn/server": ^9.0.2
+      next: ^14.0.0-0 || ^15.0.0-0
+      nodemailer: ^6.6.5
+      react: ^18.2.0 || ^19.0.0-0
+    peerDependenciesMeta:
+      "@simplewebauthn/browser":
+        optional: true
+      "@simplewebauthn/server":
+        optional: true
+      nodemailer:
+        optional: true
+
   next@15.1.3:
     resolution:
       {
@@ -3828,6 +4083,13 @@ packages:
       }
     engines: { node: ">=8" }
 
+  nodemailer@6.10.0:
+    resolution:
+      {
+        integrity: sha512-SQ3wZCExjeSatLE/HBaXS5vqUOQk6GtBdIIKxiFdmm01mOQZX/POJkO3SUX1wDiYcwUOJwT23scFSC9fY2H8IA==,
+      }
+    engines: { node: ">=6.0.0" }
+
   normalize-path@3.0.0:
     resolution:
       {
@@ -3853,6 +4115,12 @@ packages:
     resolution:
       {
         integrity: sha512-F1I/bimDpj3ncaNDhfyMWuFqmQDBwDB0Fogc2qpL3BWvkQteFD/8BzWuIRl83rq0DXfm8SGt/HFhLXZyljTXcQ==,
+      }
+
+  oauth4webapi@3.1.4:
+    resolution:
+      {
+        integrity: sha512-eVfN3nZNbok2s/ROifO0UAc5G8nRoLSbrcKJ09OqmucgnhXEfdIQOR4gq1eJH1rN3gV7rNw62bDEgftsgFtBEg==,
       }
 
   object-assign@4.1.1:
@@ -4150,6 +4418,34 @@ packages:
       }
     engines: { node: ^10 || ^12 || >=14 }
 
+  preact-render-to-string@5.2.3:
+    resolution:
+      {
+        integrity: sha512-aPDxUn5o3GhWdtJtW0svRC2SS/l8D9MAgo2+AWml+BhDImb27ALf04Q2d+AHqUUOc6RdSXFIBVa2gxzgMKgtZA==,
+      }
+    peerDependencies:
+      preact: ">=10"
+
+  preact-render-to-string@6.5.11:
+    resolution:
+      {
+        integrity: sha512-ubnauqoGczeGISiOh6RjX0/cdaF8v/oDXIjO85XALCQjwQP+SB4RDXXtvZ6yTYSjG+PC1QRP2AhPgCEsM2EvUw==,
+      }
+    peerDependencies:
+      preact: ">=10"
+
+  preact@10.11.3:
+    resolution:
+      {
+        integrity: sha512-eY93IVpod/zG3uMF22Unl8h9KkrcKIRs2EGar8hwLZZDU1lkjph303V9HZBwufh2s736U6VXuhD109LYqPoffg==,
+      }
+
+  preact@10.24.3:
+    resolution:
+      {
+        integrity: sha512-Z2dPnBnMUfyQfSQ+GBdsGa16hz35YmLmtTLhM169uW944hYL6xzTYkJjC07j+Wosz733pMWx0fgON3JNw1jJQA==,
+      }
+
   prelude-ls@1.2.1:
     resolution:
       {
@@ -4263,6 +4559,12 @@ packages:
         integrity: sha512-Pdlw/oPxN+aXdmM9R00JVC9WVFoCLTKJvDVLgmJ+qAffBMxsV85l/Lu7sNx4zSzPyoL2euImuEwHhOXdEgNFZQ==,
       }
     engines: { node: ^14.15.0 || ^16.10.0 || >=18.0.0 }
+
+  pretty-format@3.8.0:
+    resolution:
+      {
+        integrity: sha512-WuxUnVtlWL1OfZFQFuqvnvs6MiAGk9UNsBostyBOB0Is9wb5uRESevA6rnl/rkksXaGX3GzZhPup5d6Vp1nFew==,
+      }
 
   prisma@6.3.1:
     resolution:
@@ -5313,6 +5615,12 @@ packages:
       }
     engines: { node: ">=10" }
 
+  zod@3.24.2:
+    resolution:
+      {
+        integrity: sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==,
+      }
+
 snapshots:
   "@adobe/css-tools@4.4.1": {}
 
@@ -5322,6 +5630,37 @@ snapshots:
     dependencies:
       "@jridgewell/gen-mapping": 0.3.8
       "@jridgewell/trace-mapping": 0.3.25
+
+  "@auth/core@0.37.2(nodemailer@6.10.0)":
+    dependencies:
+      "@panva/hkdf": 1.2.1
+      "@types/cookie": 0.6.0
+      cookie: 0.7.1
+      jose: 5.9.6
+      oauth4webapi: 3.1.4
+      preact: 10.11.3
+      preact-render-to-string: 5.2.3(preact@10.11.3)
+    optionalDependencies:
+      nodemailer: 6.10.0
+
+  "@auth/core@0.37.4(nodemailer@6.10.0)":
+    dependencies:
+      "@panva/hkdf": 1.2.1
+      jose: 5.9.6
+      oauth4webapi: 3.1.4
+      preact: 10.24.3
+      preact-render-to-string: 6.5.11(preact@10.24.3)
+    optionalDependencies:
+      nodemailer: 6.10.0
+
+  "@auth/prisma-adapter@2.7.4(@prisma/client@6.3.1(prisma@6.3.1(typescript@5.7.2))(typescript@5.7.2))(nodemailer@6.10.0)":
+    dependencies:
+      "@auth/core": 0.37.4(nodemailer@6.10.0)
+      "@prisma/client": 6.3.1(prisma@6.3.1(typescript@5.7.2))(typescript@5.7.2)
+    transitivePeerDependencies:
+      - "@simplewebauthn/browser"
+      - "@simplewebauthn/server"
+      - nodemailer
 
   "@babel/code-frame@7.26.2":
     dependencies:
@@ -5909,6 +6248,8 @@ snapshots:
 
   "@nolyfill/is-core-module@1.0.39": {}
 
+  "@panva/hkdf@1.2.1": {}
+
   "@pkgjs/parseargs@0.11.0":
     optional: true
 
@@ -5941,6 +6282,83 @@ snapshots:
 
   "@prisma/prisma-schema-wasm@4.17.0-26.6b0aef69b7cdfc787f822ecd7cdc76d5f1991584":
     {}
+
+  "@radix-ui/react-avatar@1.1.3(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)":
+    dependencies:
+      "@radix-ui/react-context": 1.1.1(@types/react@19.0.2)(react@19.0.0)
+      "@radix-ui/react-primitive": 2.0.2(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      "@radix-ui/react-use-callback-ref": 1.1.0(@types/react@19.0.2)(react@19.0.0)
+      "@radix-ui/react-use-layout-effect": 1.1.0(@types/react@19.0.2)(react@19.0.0)
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+    optionalDependencies:
+      "@types/react": 19.0.2
+      "@types/react-dom": 19.0.2(@types/react@19.0.2)
+
+  "@radix-ui/react-compose-refs@1.1.1(@types/react@19.0.2)(react@19.0.0)":
+    dependencies:
+      react: 19.0.0
+    optionalDependencies:
+      "@types/react": 19.0.2
+
+  "@radix-ui/react-context@1.1.1(@types/react@19.0.2)(react@19.0.0)":
+    dependencies:
+      react: 19.0.0
+    optionalDependencies:
+      "@types/react": 19.0.2
+
+  "@radix-ui/react-label@2.1.2(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)":
+    dependencies:
+      "@radix-ui/react-primitive": 2.0.2(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+    optionalDependencies:
+      "@types/react": 19.0.2
+      "@types/react-dom": 19.0.2(@types/react@19.0.2)
+
+  "@radix-ui/react-primitive@2.0.2(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)":
+    dependencies:
+      "@radix-ui/react-slot": 1.1.2(@types/react@19.0.2)(react@19.0.0)
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+    optionalDependencies:
+      "@types/react": 19.0.2
+      "@types/react-dom": 19.0.2(@types/react@19.0.2)
+
+  "@radix-ui/react-separator@1.1.2(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)":
+    dependencies:
+      "@radix-ui/react-primitive": 2.0.2(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+    optionalDependencies:
+      "@types/react": 19.0.2
+      "@types/react-dom": 19.0.2(@types/react@19.0.2)
+
+  "@radix-ui/react-slot@1.1.1(@types/react@19.0.2)(react@19.0.0)":
+    dependencies:
+      "@radix-ui/react-compose-refs": 1.1.1(@types/react@19.0.2)(react@19.0.0)
+      react: 19.0.0
+    optionalDependencies:
+      "@types/react": 19.0.2
+
+  "@radix-ui/react-slot@1.1.2(@types/react@19.0.2)(react@19.0.0)":
+    dependencies:
+      "@radix-ui/react-compose-refs": 1.1.1(@types/react@19.0.2)(react@19.0.0)
+      react: 19.0.0
+    optionalDependencies:
+      "@types/react": 19.0.2
+
+  "@radix-ui/react-use-callback-ref@1.1.0(@types/react@19.0.2)(react@19.0.0)":
+    dependencies:
+      react: 19.0.0
+    optionalDependencies:
+      "@types/react": 19.0.2
+
+  "@radix-ui/react-use-layout-effect@1.1.0(@types/react@19.0.2)(react@19.0.0)":
+    dependencies:
+      react: 19.0.0
+    optionalDependencies:
+      "@types/react": 19.0.2
 
   "@rtsao/scc@1.1.0": {}
 
@@ -6018,6 +6436,8 @@ snapshots:
     dependencies:
       "@babel/types": 7.26.3
 
+  "@types/cookie@0.6.0": {}
+
   "@types/eslint-config-prettier@6.11.3": {}
 
   "@types/eslint@9.6.1":
@@ -6063,6 +6483,10 @@ snapshots:
   "@types/node@20.17.11":
     dependencies:
       undici-types: 6.19.8
+
+  "@types/nodemailer@6.4.17":
+    dependencies:
+      "@types/node": 20.17.11
 
   "@types/react-dom@19.0.2(@types/react@19.0.2)":
     dependencies:
@@ -6509,6 +6933,8 @@ snapshots:
   concat-map@0.0.1: {}
 
   convert-source-map@2.0.0: {}
+
+  cookie@0.7.1: {}
 
   create-jest@29.7.0(@types/node@20.17.11):
     dependencies:
@@ -7765,6 +8191,8 @@ snapshots:
 
   jiti@1.21.7: {}
 
+  jose@5.9.6: {}
+
   js-tokens@4.0.0: {}
 
   js-yaml@3.14.1:
@@ -7954,6 +8382,14 @@ snapshots:
       railroad-diagrams: 1.0.0
       randexp: 0.4.6
 
+  next-auth@5.0.0-beta.25(next@15.1.3(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(nodemailer@6.10.0)(react@19.0.0):
+    dependencies:
+      "@auth/core": 0.37.2(nodemailer@6.10.0)
+      next: 15.1.3(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react: 19.0.0
+    optionalDependencies:
+      nodemailer: 6.10.0
+
   next@15.1.3(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       "@next/env": 15.1.3
@@ -7995,6 +8431,8 @@ snapshots:
     dependencies:
       big-integer: 1.6.52
 
+  nodemailer@6.10.0: {}
+
   normalize-path@3.0.0: {}
 
   npm-normalize-package-bin@4.0.0: {}
@@ -8004,6 +8442,8 @@ snapshots:
       path-key: 3.1.1
 
   nwsapi@2.2.16: {}
+
+  oauth4webapi@3.1.4: {}
 
   object-assign@4.1.1: {}
 
@@ -8176,6 +8616,19 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
+  preact-render-to-string@5.2.3(preact@10.11.3):
+    dependencies:
+      preact: 10.11.3
+      pretty-format: 3.8.0
+
+  preact-render-to-string@6.5.11(preact@10.24.3):
+    dependencies:
+      preact: 10.24.3
+
+  preact@10.11.3: {}
+
+  preact@10.24.3: {}
+
   prelude-ls@1.2.1: {}
 
   prettier-plugin-prisma@5.0.0(prettier@3.4.2):
@@ -8214,6 +8667,8 @@ snapshots:
       "@jest/schemas": 29.6.3
       ansi-styles: 5.2.0
       react-is: 18.3.1
+
+  pretty-format@3.8.0: {}
 
   prisma@6.3.1(typescript@5.7.2):
     dependencies:
@@ -8908,3 +9363,5 @@ snapshots:
       yargs-parser: 21.1.1
 
   yocto-queue@0.1.0: {}
+
+  zod@3.24.2: {}
