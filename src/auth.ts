@@ -5,7 +5,7 @@ import NodeMailer from "next-auth/providers/nodemailer"
 
 import { prisma } from "@/lib/prisma"
 
-export const { handlers, signIn, signOut, auth } = NextAuth({
+export const { handlers, signIn, signOut, auth, unstable_update } = NextAuth({
   ...authConfig,
   adapter: PrismaAdapter(prisma),
   providers: [
@@ -26,4 +26,17 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       from: process.env.EMAIL_FROM,
     }),
   ],
+
+  callbacks: {
+    ...authConfig.callbacks,
+    async jwt({ token, trigger, account, session }) {
+      if (trigger === "signUp" && account!.type === "email") {
+        const email = account!.providerAccountId
+        const user = await prisma.user.findUnique({ where: { email } })
+        token.newUser = user?.username == null
+      } else if (trigger === "update") token.newUser = session.newUser
+
+      return token
+    },
+  },
 })
