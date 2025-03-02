@@ -1,5 +1,6 @@
-import { auth } from "@/auth"
 import { Itim, Jost } from "next/font/google"
+
+import { auth } from "@/lib/auth"
 
 import FirstLogin from "@/components/first-login"
 import LoginForm from "@/components/login-form"

@@ -1,7 +1,8 @@
-import { signIn } from "@/auth"
 import Form from "next/form"
 import Image from "next/image"
 import Link from "next/link"
+
+import { signIn } from "@/lib/auth"
 
 import { Button } from "@/ui/button"
 import { Input } from "@/ui/input"
@@ -52,9 +53,9 @@ export default function LoginForm() {
             <span className="w-full border-t" />
           </div>
           <div className="relative mx-auto flex w-[100%] items-center">
-            <div className="flex-1 border-2 border-lime-500"></div>
+            <div className="flex-1 border-2 border-lime-500" />
             <span className="mx-4 font-semibold">or</span>
-            <div className="flex-1 border-2 border-lime-500"></div>
+            <div className="flex-1 border-2 border-lime-500" />
           </div>
         </div>
       </div>

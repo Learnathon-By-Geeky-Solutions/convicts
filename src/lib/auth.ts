@@ -1,8 +1,8 @@
-import authConfig from "@/auth.config"
 import { PrismaAdapter } from "@auth/prisma-adapter"
 import NextAuth from "next-auth"
 import NodeMailer from "next-auth/providers/nodemailer"
 
+import authConfig from "@/lib/auth.config"
 import { prisma } from "@/lib/prisma"
 
 export const { handlers, signIn, signOut, auth, unstable_update } = NextAuth({

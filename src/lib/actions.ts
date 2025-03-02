@@ -1,9 +1,9 @@
 "use server"
 
-import { auth, unstable_update as updateSession } from "@/auth"
 import { redirect } from "next/navigation"
 import { z } from "zod"
 
+import { auth, unstable_update as updateSession } from "@/lib/auth"
 import { prisma } from "@/lib/prisma"
 import { UserSchema } from "@/lib/utils"
 
@@ -14,7 +14,7 @@ const FirstLoginSchema = UserSchema.pick({
 })
 
 export async function firstLogin(
-  prevState: z.ZodError<z.infer<typeof FirstLoginSchema>> | void,
+  prevState: z.ZodError<z.infer<typeof FirstLoginSchema>> | undefined,
   formData: FormData,
 ) {
   const session = await auth()
