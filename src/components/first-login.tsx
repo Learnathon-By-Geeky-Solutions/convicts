@@ -18,7 +18,7 @@ export default function FirstLogin() {
 
   return (
     <Form
-      className={`${inter.className} mb-11 mt-7 flex flex-col gap-7`}
+      className={`${inter.className} mt-7 mb-11 flex flex-col gap-7`}
       action={formAction}
       disabled={isPending}
     >

@@ -3,7 +3,7 @@
 exports[`renders intro page unchanged 1`] = `
 <div>
   <div
-    class="mx-auto w-max max-w-sm className"
+    class="mx-auto flex w-max max-w-sm flex-col items-center className"
   >
     <div
       class="flex flex-col items-center"
@@ -18,7 +18,7 @@ exports[`renders intro page unchanged 1`] = `
         </span>
       </span>
       <h1
-        class="mb-6 mt-10 indent-[.3em] text-2xl uppercase tracking-[.3em]"
+        class="mt-10 mb-6 indent-[.3em] text-2xl tracking-[.3em] uppercase"
       >
         Carlander
       </h1>
@@ -26,7 +26,7 @@ exports[`renders intro page unchanged 1`] = `
         Find, Park, Go! Hassle-free parking at your fingertips.
       </p>
       <button
-        class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-zinc-300 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-zinc-950 text-zinc-50 shadow-sm transition-colors duration-100 hover:border-2 hover:border-lime-500 active:bg-lime-500 h-9 px-4 py-2 my-[4rem] uppercase"
+        class="inline-flex items-center justify-center gap-2 rounded-md border-2 border-transparent text-sm font-medium whitespace-nowrap focus-visible:ring-1 focus-visible:ring-zinc-950 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-zinc-300 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-zinc-950 text-zinc-50 shadow-xs transition-colors duration-100 hover:border-lime-500 active:bg-lime-500 h-9 px-4 py-2 my-[4rem] uppercase"
       >
         <a
           href="/login"
@@ -36,7 +36,7 @@ exports[`renders intro page unchanged 1`] = `
       </button>
     </div>
     <div
-      class="shrink-0 bg-zinc-200 dark:bg-zinc-800 h-[1px] w-full border-2 border-lime-500"
+      class="shrink-0 bg-zinc-200 dark:bg-zinc-800 h-[1px] w-full w-xs border-2 border-lime-500"
       data-orientation="horizontal"
       role="none"
     />
@@ -45,7 +45,7 @@ exports[`renders intro page unchanged 1`] = `
     >
       <img
         alt="a vector art of bangladesh."
-        class="mb-8 mt-12"
+        class="mt-12 mb-8"
         data-nimg="1"
         decoding="async"
         height="219"
@@ -61,7 +61,7 @@ exports[`renders intro page unchanged 1`] = `
       </p>
     </div>
     <div
-      class="shrink-0 bg-zinc-200 dark:bg-zinc-800 h-[1px] w-full border-2 border-lime-500"
+      class="shrink-0 bg-zinc-200 dark:bg-zinc-800 h-[1px] w-full w-xs border-2 border-lime-500"
       data-orientation="horizontal"
       role="none"
     />
@@ -70,7 +70,7 @@ exports[`renders intro page unchanged 1`] = `
     >
       <img
         alt="the app can be accessed anytime via any device"
-        class="mb-11 mt-[6rem]"
+        class="mt-[6rem] mb-11"
         data-nimg="1"
         decoding="async"
         height="137"
@@ -86,7 +86,7 @@ exports[`renders intro page unchanged 1`] = `
       </p>
     </div>
     <div
-      class="shrink-0 bg-zinc-200 dark:bg-zinc-800 h-[1px] w-full border-2 border-lime-500"
+      class="shrink-0 bg-zinc-200 dark:bg-zinc-800 h-[1px] w-full w-xs border-2 border-lime-500"
       data-orientation="horizontal"
       role="none"
     />
@@ -95,7 +95,7 @@ exports[`renders intro page unchanged 1`] = `
     >
       <img
         alt="the app features multiple payment options"
-        class="mb-10 mt-[5rem]"
+        class="mt-[5rem] mb-10"
         data-nimg="1"
         decoding="async"
         height="168"
@@ -111,7 +111,7 @@ exports[`renders intro page unchanged 1`] = `
       </p>
     </div>
     <div
-      class="shrink-0 bg-zinc-200 dark:bg-zinc-800 h-[1px] w-full border-2 border-lime-500"
+      class="shrink-0 bg-zinc-200 dark:bg-zinc-800 h-[1px] w-full w-xs border-2 border-lime-500"
       data-orientation="horizontal"
       role="none"
     />
@@ -119,12 +119,12 @@ exports[`renders intro page unchanged 1`] = `
       class="flex flex-col items-center"
     >
       <h2
-        class="mb-[3.5rem] mt-[4rem] indent-[.3em] text-2xl uppercase tracking-[.3em]"
+        class="mt-[4rem] mb-[3.5rem] indent-[.3em] text-2xl tracking-[.3em] uppercase"
       >
         And more
       </h2>
       <a
-        class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-zinc-300 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-zinc-950 text-zinc-50 shadow-sm transition-colors duration-100 hover:border-2 hover:border-lime-500 active:bg-lime-500 h-9 px-4 py-2 mb-[8rem] uppercase"
+        class="inline-flex items-center justify-center gap-2 rounded-md border-2 border-transparent text-sm font-medium whitespace-nowrap focus-visible:ring-1 focus-visible:ring-zinc-950 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-zinc-300 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-zinc-950 text-zinc-50 shadow-xs transition-colors duration-100 hover:border-lime-500 active:bg-lime-500 h-9 px-4 py-2 mb-[8rem] uppercase"
         href="/login"
       >
         Get Started

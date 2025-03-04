@@ -18,10 +18,11 @@ const jost = Jost()
 
 export default async function LoginPage() {
   const session = await auth()
+  const newUser = session?.newUser
 
   return (
     <div
-      className={`m-auto flex w-max max-w-sm flex-col items-center ${jost.className}`}
+      className={`mx-auto flex w-max max-w-sm flex-col items-center ${jost.className}`}
     >
       <div className="flex flex-col items-center">
         <Avatar className="mt-[4rem] aspect-square h-auto w-max rounded-lg border-4 border-zinc-950">
@@ -36,14 +37,16 @@ export default async function LoginPage() {
           Carlander
         </h1>
         <p className="my-6 text-center">
-          Welcome! Please log in to continue
+          {newUser
+            ? "Quickstart with the following details"
+            : "Welcome! Please log in to continue"}
           <br />
-          <span className="text-lime-500">Log in using</span>
+          {!newUser && <span className="text-lime-500">Log in using</span>}
         </p>
 
-        {!session?.newUser && <OAuthButtons />}
+        {!newUser && <OAuthButtons />}
       </div>
-      {!session?.newUser && (
+      {!newUser && (
         <>
           <div className="flex w-xs items-center gap-6">
             <Separator className="shrink border-2 border-lime-500" />
@@ -53,7 +56,7 @@ export default async function LoginPage() {
         </>
       )}
 
-      {session?.newUser ? <FirstLogin /> : <LoginForm />}
+      {newUser ? <FirstLogin /> : <LoginForm />}
     </div>
   )
 }

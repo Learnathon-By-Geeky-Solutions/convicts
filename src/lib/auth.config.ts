@@ -31,6 +31,10 @@ export default {
 
     async session({ token, session }: JWTSessionParams) {
       session.newUser = token.newUser
+      if (session.user) {
+        session.user.username = token.username
+        session.user.name = token.name
+      }
       return session
     },
   },

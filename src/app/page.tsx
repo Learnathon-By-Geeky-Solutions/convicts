@@ -15,7 +15,9 @@ const jost = Jost()
 
 export default function Page() {
   return (
-    <div className={`mx-auto w-max max-w-sm ${jost.className}`}>
+    <div
+      className={`mx-auto flex w-max max-w-sm flex-col items-center ${jost.className}`}
+    >
       <div className="flex flex-col items-center">
         <Avatar className="mt-[4rem] aspect-square h-auto w-max rounded-lg border-4 border-zinc-950">
           <AvatarImage src="" />
@@ -25,7 +27,7 @@ export default function Page() {
             LOGO
           </AvatarFallback>
         </Avatar>
-        <h1 className="mb-6 mt-10 indent-[.3em] text-2xl uppercase tracking-[.3em]">
+        <h1 className="mt-10 mb-6 indent-[.3em] text-2xl tracking-[.3em] uppercase">
           Carlander
         </h1>
         <p>Find, Park, Go! Hassle-free parking at your fingertips.</p>
@@ -33,11 +35,11 @@ export default function Page() {
           <Link href="/login">Get Started</Link>
         </Button>
       </div>
-      <Separator className="border-2 border-lime-500" />
+      <Separator className="w-xs border-2 border-lime-500" />
 
       <div className="flex flex-col items-center">
         <Image
-          className="mb-8 mt-12"
+          className="mt-12 mb-8"
           src="/bangladesh.svg"
           alt="a vector art of bangladesh."
           width={174}
@@ -47,11 +49,11 @@ export default function Page() {
           50+ parking locations available for booking.
         </p>
       </div>
-      <Separator className="border-2 border-lime-500" />
+      <Separator className="w-xs border-2 border-lime-500" />
 
       <div className="flex flex-col items-center">
         <Image
-          className="mb-11 mt-[6rem]"
+          className="mt-[6rem] mb-11"
           src="/mobile.svg"
           alt="the app can be accessed anytime via any device"
           width={181}
@@ -59,11 +61,11 @@ export default function Page() {
         />
         <p className="mb-11">Book a spot on the go!</p>
       </div>
-      <Separator className="border-2 border-lime-500" />
+      <Separator className="w-xs border-2 border-lime-500" />
 
       <div className="flex flex-col items-center">
         <Image
-          className="mb-10 mt-[5rem]"
+          className="mt-[5rem] mb-10"
           src="/money.svg"
           alt="the app features multiple payment options"
           width={178}
@@ -73,10 +75,10 @@ export default function Page() {
           Multiple payment options including payment apps and card.
         </p>
       </div>
-      <Separator className="border-2 border-lime-500" />
+      <Separator className="w-xs border-2 border-lime-500" />
 
       <div className="flex flex-col items-center">
-        <h2 className="mb-[3.5rem] mt-[4rem] indent-[.3em] text-2xl uppercase tracking-[.3em]">
+        <h2 className="mt-[4rem] mb-[3.5rem] indent-[.3em] text-2xl tracking-[.3em] uppercase">
           And more
         </h2>
         <Button variant="custom_black" asChild className="mb-[8rem] uppercase">
