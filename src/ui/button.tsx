@@ -6,7 +6,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-colors focus-visible:ring-1 focus-visible:ring-zinc-950 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-zinc-300 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 rounded-md border-2 border-transparent text-sm font-medium whitespace-nowrap transition-colors focus-visible:ring-1 focus-visible:ring-zinc-950 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-zinc-300 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -22,9 +22,9 @@ const buttonVariants = cva(
           "hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-50",
         link: "text-zinc-900 underline-offset-4 hover:underline dark:text-zinc-50",
         custom_black:
-          "bg-zinc-950 text-zinc-50 shadow-xs transition-colors duration-100 hover:border-2 hover:border-lime-500 active:bg-lime-500",
+          "bg-zinc-950 text-zinc-50 shadow-xs transition-colors duration-100 hover:border-lime-500 active:bg-lime-500",
         custom_lime:
-          "bg-lime-500 text-zinc-50 shadow-xs transition-colors duration-100 hover:border-2 hover:border-zinc-950 active:bg-zinc-950",
+          "bg-lime-500 text-zinc-50 shadow-xs transition-colors duration-100 hover:border-zinc-950 active:bg-zinc-950",
       },
       size: {
         default: "h-9 px-4 py-2",

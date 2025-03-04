@@ -43,5 +43,6 @@ yarn-error.log*
 next-env.d.ts
 
 # Temporary
-/src/app/home
-/src/app/logout
+/src/app/home/
+/src/app/logout/
+/src/app/signup/
