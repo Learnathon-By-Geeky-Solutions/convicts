@@ -36,6 +36,7 @@
     "@eslint/compat": "^1.2.4",
     "@eslint/eslintrc": "^3",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
+    "@tailwindcss/postcss": "^4.0.9",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
@@ -56,10 +57,10 @@
     "prettier-plugin-prisma": "^5.0.0",
     "prettier-plugin-sort-json": "^4.0.0",
     "prettier-plugin-sql": "^0.18.1",
-    "prettier-plugin-tailwindcss": "^0.6.9",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "prisma": "^6.3.1",
     "supabase": "^2.12.1",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^4.0.9",
     "typescript": "^5"
   },
   "packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321"

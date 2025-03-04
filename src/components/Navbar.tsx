@@ -9,7 +9,7 @@ const Navbar = async () => {
   // const session = await auth()
 
   return (
-    // <header className="border-4 bg-green-500 px-5 py-3 font-sans shadow-sm">
+    // <header className="border-4 bg-green-500 px-5 py-3 font-sans shadow-xs">
     //   <nav className="flex items-center justify-between">
     //     <Link href="/">
     //       <Image src="/bangladesh.svg" alt="logo" width={144} height={144} />
@@ -103,7 +103,7 @@ const Navbar = async () => {
     //     </div>
     //   </nav>
     // </header>
-    <header className="border-4 bg-lime-500 px-5 py-3 font-sans shadow-sm">
+    <header className="border-4 bg-lime-500 px-5 py-3 font-sans shadow-xs">
       <nav className="flex items-center justify-between">
         {/* <Link href="/">
           <Button variant="custom_black">Test Button</Button>
