@@ -9,7 +9,11 @@ interface JWTSessionParams {
 }
 
 export default {
-  pages: { signIn: "/login" },
+  pages: {
+    signIn: "/login",
+    verifyRequest: "/auth/verify-request",
+    error: "/auth/error",
+  },
   session: { strategy: "jwt" },
   callbacks: {
     async authorized({ auth, request: { nextUrl } }) {

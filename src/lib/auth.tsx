@@ -17,7 +17,7 @@ export const { handlers, signIn, signOut, auth, unstable_update } = NextAuth({
     NodeMailer({
       server: {
         host: process.env.EMAIL_SERVER_HOST,
-        port: parseInt(process.env.EMAIL_SERVER_PORT!),
+        port: Number.parseInt(process.env.EMAIL_SERVER_PORT!),
         auth: {
           type: "OAuth2",
           user: process.env.EMAIL_SERVER_USER,

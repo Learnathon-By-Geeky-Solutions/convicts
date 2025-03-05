@@ -47,13 +47,11 @@ export default async function LoginPage() {
         {!newUser && <OAuthButtons />}
       </div>
       {!newUser && (
-        <>
-          <div className="flex w-xs items-center gap-6">
-            <Separator className="shrink border-2 border-lime-500" />
-            or
-            <Separator className="shrink border-2 border-lime-500" />
-          </div>
-        </>
+        <div className="flex w-xs items-center gap-6">
+          <Separator className="shrink border-2 border-lime-500" />
+          or
+          <Separator className="shrink border-2 border-lime-500" />
+        </div>
       )}
 
       {newUser ? <FirstLogin /> : <LoginForm />}
