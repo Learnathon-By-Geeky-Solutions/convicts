@@ -1,0 +1,25 @@
+{
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "usernamehw.errorlens",
+        "dbaeumer.vscode-eslint",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "GitHub.vscode-pull-request-github",
+        "esbenp.prettier-vscode",
+        "Prisma.prisma",
+        "bradlc.vscode-tailwindcss",
+        "Orta.vscode-jest"
+      ]
+    }
+  },
+
+  "features": {
+    "ghcr.io/devcontainers-extra/features/pnpm:2": {}
+  },
+
+  "image": "node:jod-slim",
+  "name": "convicts-dev-env",
+  "postCreateCommand": "pnpm install"
+}
