@@ -16,10 +16,12 @@
   },
 
   "features": {
-    "ghcr.io/devcontainers-extra/features/pnpm:2": {}
+    "ghcr.io/devcontainers-extra/features/pnpm:2": {},
+    "ghcr.io/devcontainers/features/git:1": {}
   },
 
   "image": "node:jod-slim",
   "name": "convicts-dev-env",
-  "postCreateCommand": "pnpm install"
+  "postCreateCommand": ". ./.devcontainer/bootstrap.sh",
+  "remoteUser": "node"
 }
