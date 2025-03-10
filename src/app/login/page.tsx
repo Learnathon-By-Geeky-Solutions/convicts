@@ -54,7 +54,7 @@ export default async function LoginPage() {
         </div>
       )}
 
-      {newUser ? <FirstLogin /> : <LoginForm />}
+      {newUser ? <FirstLogin user={session.user!} /> : <LoginForm />}
     </div>
   )
 }

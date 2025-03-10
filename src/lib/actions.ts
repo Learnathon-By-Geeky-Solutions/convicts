@@ -14,16 +14,16 @@ const FirstLoginSchema = UserSchema.pick({
 })
 
 export async function firstLogin(
-  prevState: z.ZodError<z.infer<typeof FirstLoginSchema>> | undefined,
+  prevState: z.inferFlattenedErrors<typeof FirstLoginSchema> | undefined,
   formData: FormData,
 ) {
   const session = await auth()
-  const data: { [key: string]: string } = {}
+  const data = {} as Record<string, string>
   formData.forEach((value, key) => (data[key] = value.toString()))
   data.email = session!.user!.email!
 
   const parsedInput = await FirstLoginSchema.safeParseAsync(data)
-  if (!parsedInput.success) return parsedInput.error
+  if (!parsedInput.success) return parsedInput.error.flatten()
 
   const { username, name, email } = parsedInput.data
   await prisma.user.update({

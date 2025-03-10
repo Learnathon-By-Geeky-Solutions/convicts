@@ -25,9 +25,6 @@ model User {
 
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
-
-  // Optional for WebAuthn support
-  // Authenticator Authenticator[]
 }
 
 model Account {
@@ -68,20 +65,3 @@ model VerificationToken {
 
   @@id([identifier, token])
 }
-
-// Optional for WebAuthn support
-
-// model Authenticator {
-//   credentialID         String  @unique
-//   userId               String  @map("user_id")
-//   providerAccountId    String  @map("provider_account_id")
-//   credentialPublicKey  String  @map("credential_public_key")
-//   counter              Int
-//   credentialDeviceType String  @map("credential_device_type")
-//   credentialBackedUp   Boolean @map("credential_backed_up")
-//   transports           String?
-
-//   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-//   @@id([userId, credentialID])
-// }

@@ -2,6 +2,7 @@
 
 import { useActionState } from "react"
 
+import { User } from "next-auth"
 import { Inter } from "next/font/google"
 import Form from "next/form"
 
@@ -13,7 +14,7 @@ import { Label } from "@/ui/label"
 
 const inter = Inter()
 
-export default function FirstLogin() {
+export default function FirstLogin({ user }: { user: User }) {
   const [errors, formAction, isPending] = useActionState(firstLogin, undefined)
 
   return (
@@ -28,8 +29,12 @@ export default function FirstLogin() {
           className="mt-2 rounded-lg border-[3px] border-lime-500"
           id="username"
           name="username"
-          required
         />
+        {errors?.fieldErrors.username && (
+          <div className="my-2 rounded border-2 border-red-500 bg-red-100 p-2 text-red-500">
+            {errors.fieldErrors.username.join("\n")}
+          </div>
+        )}
       </div>
       <div>
         <Label htmlFor="name">Full Name</Label>
@@ -37,7 +42,13 @@ export default function FirstLogin() {
           className="mt-2 rounded-lg border-[3px] border-lime-500"
           id="name"
           name="name"
+          defaultValue={user.name ?? ""}
         />
+        {errors?.fieldErrors.name && (
+          <div className="my-2 rounded border-2 border-red-500 bg-red-100 p-2 text-red-500">
+            {errors.fieldErrors.name.join("\n")}
+          </div>
+        )}
       </div>
       <Button
         type="submit"
@@ -47,7 +58,6 @@ export default function FirstLogin() {
       >
         Continue
       </Button>
-      {errors && <div className="text-red-500">{errors.message}</div>}
     </Form>
   )
 }

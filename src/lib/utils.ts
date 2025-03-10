@@ -13,10 +13,14 @@ export const UserSchema = z.object({
     .string()
     .min(3)
     .max(20)
+    .regex(/(?=.*[a-zA-Z])[\w-]*/, {
+      message: "Buckoo, stick to a reasonable username",
+    })
     .refine(
-      async (username) =>
-        !(await prisma.user.findUnique({ where: { username } })),
-      { message: "Username already taken" },
+      // check for unique username
+      // prettier-ignore
+      async (username) => !(await prisma.user.findUnique({ where: { username } })),
+      { message: "Username is already taken" },
     ),
   name: z.string().min(3).max(64).optional(),
   email: z.string().email(),

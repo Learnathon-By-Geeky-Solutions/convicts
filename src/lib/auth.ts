@@ -1,3 +1,5 @@
+import React from "react"
+
 import { PrismaAdapter } from "@auth/prisma-adapter"
 import { render } from "@react-email/components"
 import NextAuth from "next-auth"
@@ -9,9 +11,28 @@ import VerifyEmail from "@/emails/verification"
 import authConfig from "@/lib/auth.config"
 import { prisma } from "@/lib/prisma"
 
+// import { createId } from "@paralleldrive/cuid2"
+
 export const { handlers, signIn, signOut, auth, unstable_update } = NextAuth({
   ...authConfig,
   adapter: PrismaAdapter(prisma),
+
+  // in case username must be non null
+  // this is a nice implementation specific workaround
+
+  // adapter: PrismaAdapter(
+  //   prisma.$extends({
+  //     query: {
+  //       user: {
+  //         async create({ args, query }) {
+  //           args.data.username ??= `!${createId()}`
+  //           return query(args)
+  //         },
+  //       },
+  //     },
+  //   }),
+  // ),
+
   providers: [
     ...authConfig.providers,
     NodeMailer({
@@ -30,10 +51,11 @@ export const { handlers, signIn, signOut, auth, unstable_update } = NextAuth({
       async sendVerificationRequest({ provider, url, identifier: to }) {
         const transporter = nodemailer.createTransport(provider.server)
         const subject = "Sign in to Carlander"
+        const email = React.createElement(VerifyEmail, { url })
 
         const [html, text] = await Promise.all([
-          render(<VerifyEmail url={url} />),
-          render(<VerifyEmail url={url} />, { plainText: true }),
+          render(email),
+          render(email, { plainText: true }),
         ])
 
         await transporter.sendMail({ to, html, text, subject })
@@ -43,12 +65,9 @@ export const { handlers, signIn, signOut, auth, unstable_update } = NextAuth({
 
   callbacks: {
     ...authConfig.callbacks,
-    async jwt({ token, trigger, account, session }) {
-      if (trigger === "signUp" && account!.type === "email") {
-        const email = account!.providerAccountId
-        const user = await prisma.user.findUnique({ where: { email } })
-        token.newUser = user?.username == null
-      } else if (trigger === "update") {
+    async jwt({ token, trigger, session }) {
+      if (trigger === "signUp") token.newUser = true
+      else if (trigger === "update") {
         token.newUser = session.newUser
         token.username = session.user.username
         token.name = session.user.name

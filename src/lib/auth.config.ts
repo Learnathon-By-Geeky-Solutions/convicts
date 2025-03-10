@@ -1,11 +1,16 @@
 import type { NextAuthConfig, Session } from "next-auth"
 import { JWT } from "next-auth/jwt"
+import { OAuth2Config } from "next-auth/providers"
 import GitHub from "next-auth/providers/github"
 import Google from "next-auth/providers/google"
 
 interface JWTSessionParams {
   token: JWT
   session: Session
+}
+
+const OAuthDefaults: Partial<OAuth2Config<unknown>> = {
+  allowDangerousEmailAccountLinking: true,
 }
 
 export default {
@@ -42,5 +47,5 @@ export default {
       return session
     },
   },
-  providers: [Google, GitHub],
+  providers: [Google(OAuthDefaults), GitHub(OAuthDefaults)],
 } satisfies NextAuthConfig
