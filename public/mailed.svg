@@ -1,0 +1,18 @@
+<svg width="154" height="156" viewBox="0 0 154 156" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="2" y="56" width="74" height="54" rx="5" fill="#84CC16" stroke="black" stroke-width="4"/>
+<path d="M9 63L39 86" stroke="white" stroke-width="4" stroke-linecap="round"/>
+<path d="M68.3079 63L39 86" stroke="white" stroke-width="4" stroke-linecap="round"/>
+<path d="M69 104L51 86" stroke="white" stroke-width="4" stroke-linecap="round"/>
+<path d="M9 104L27 86" stroke="white" stroke-width="4" stroke-linecap="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14 116V119C14 120.657 15.3431 122 17 122H151C152.657 122 154 120.657 154 119V63H150V118H18V116H14Z" fill="black"/>
+<rect x="14" y="114" width="4" height="4" rx="2" fill="black"/>
+<line x1="116.287" y1="9.39426" x2="106.519" y2="39.5885" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M107.537 24H52.0644H50.4144C49.9454 24 49.4847 24.0359 49.0351 24.105C32.2803 25.2713 18.3975 36.0321 13.7043 50.5052H17.9471C22.4918 38.282 34.5428 29.1235 49.3128 28.0954L49.4787 28.0838L49.6431 28.0585C49.8923 28.0202 50.1496 28 50.4144 28H52.0644H106.242L107.537 24ZM114.418 28.0029C134.38 28.2424 150 43.3194 150 61.3037L150 61.4295L150 61.5052V77.5711C152.563 72.6548 154 67.1355 154 61.3037C154 41.2525 137.009 24.8963 115.702 24.0356L114.418 28.0029Z" fill="black"/>
+<rect x="137.476" y="8.39196" width="12.8973" height="20.0027" rx="2" transform="rotate(107.13 137.476 8.39196)" fill="#84CC16" stroke="black" stroke-width="4"/>
+<rect x="59" y="120" width="51" height="17" rx="3" stroke="black" stroke-width="4"/>
+<rect x="79.5" y="137.5" width="11" height="17" fill="#84CC16" stroke="black" stroke-width="3"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M87.9999 93V64.5C87.9999 44.3416 71.6583 28 51.4999 28C34.9914 28 21.0427 38.9597 16.5327 54H12.3743C16.9993 36.7227 32.7638 24 51.4999 24C73.8674 24 91.9999 42.1325 91.9999 64.5V93H87.9999Z" fill="black"/>
+<rect x="88" y="93" width="4" height="25" fill="black"/>
+<line x1="114.785" y1="99.4915" x2="119.492" y2="106.215" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<line x1="119.872" y1="106.174" x2="138.174" y2="86.1284" stroke="black" stroke-width="4" stroke-linecap="round"/>
+</svg>
