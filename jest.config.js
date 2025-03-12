@@ -11,6 +11,7 @@ const config = {
     "^@/(.*)$": "<rootDir>/src/$1",
   },
   prettierPath: "<rootDir>/node_modules/prettier",
+  transformIgnorePatterns: ["/node_modules/(?!.pnpm|@auth/prisma-adapter)"],
 }
 
 export default createJestConfig(config)
