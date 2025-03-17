@@ -38,7 +38,7 @@ describe("Page component", () => {
 
   it("renders the Bangladesh image", () => {
     render(<Page />)
-    const image = screen.getByAltText("a vector art of bangladesh.")
+    const image = screen.getByAltText("a vector art of bangladesh")
     expect(image).toBeInTheDocument()
   })
 

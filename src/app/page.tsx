@@ -19,7 +19,7 @@ export default function Page() {
       className={`mx-auto flex w-max max-w-sm flex-col items-center ${jost.className}`}
     >
       <div className="flex flex-col items-center">
-        <Avatar className="mt-[4rem] aspect-square h-auto w-max rounded-lg border-4 border-zinc-950">
+        <Avatar className="mt-16 aspect-square h-auto w-max rounded-lg border-4 border-zinc-950">
           <AvatarImage src="" />
           <AvatarFallback
             className={`${itim.className} rounded-none p-2 indent-[.2em] text-xl tracking-[.2em]`}
@@ -31,7 +31,7 @@ export default function Page() {
           Carlander
         </h1>
         <p>Find, Park, Go! Hassle-free parking at your fingertips.</p>
-        <Button variant="custom_black" className="my-[4rem] uppercase">
+        <Button variant="custom_black" className="my-16 uppercase">
           <Link href="/login">Get Started</Link>
         </Button>
       </div>
@@ -41,19 +41,17 @@ export default function Page() {
         <Image
           className="mt-12 mb-8"
           src="/bangladesh.svg"
-          alt="a vector art of bangladesh."
+          alt="a vector art of bangladesh"
           width={174}
           height={219}
         />
-        <p className="mb-[4rem]">
-          50+ parking locations available for booking.
-        </p>
+        <p className="mb-16">50+ parking locations available for booking.</p>
       </div>
       <Separator className="w-xs border-2 border-lime-500" />
 
       <div className="flex flex-col items-center">
         <Image
-          className="mt-[6rem] mb-11"
+          className="mt-24 mb-11"
           src="/mobile.svg"
           alt="the app can be accessed anytime via any device"
           width={181}
@@ -65,7 +63,7 @@ export default function Page() {
 
       <div className="flex flex-col items-center">
         <Image
-          className="mt-[5rem] mb-10"
+          className="mt-20 mb-10"
           src="/money.svg"
           alt="the app features multiple payment options"
           width={178}
@@ -78,7 +76,7 @@ export default function Page() {
       <Separator className="w-xs border-2 border-lime-500" />
 
       <div className="flex flex-col items-center">
-        <h2 className="mt-[4rem] mb-[3.5rem] indent-[.3em] text-2xl tracking-[.3em] uppercase">
+        <h2 className="mt-16 mb-14 indent-[.3em] text-2xl tracking-[.3em] uppercase">
           And more
         </h2>
         <Button variant="custom_black" asChild className="mb-[8rem] uppercase">
