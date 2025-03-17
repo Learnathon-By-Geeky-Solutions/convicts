@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders intro page unchanged 1`] = `
+exports[`Page component renders intro page unchanged 1`] = `
 <div>
   <div
     class="mx-auto flex w-max max-w-sm flex-col items-center className"

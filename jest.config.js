@@ -1,6 +1,6 @@
 import nextJest from "next/jest.js"
 
-const createJestConfig = nextJest()
+const createJestConfig = nextJest({ dir: "./" })
 
 /** @type {import("jest").Config} */
 const config = {
@@ -10,7 +10,6 @@ const config = {
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
   },
-  prettierPath: "<rootDir>/node_modules/prettier",
 }
 
 export default createJestConfig(config)

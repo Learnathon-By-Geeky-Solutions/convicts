@@ -16,7 +16,7 @@ const FirstLoginSchema = UserSchema.pick({
 export async function firstLogin(
   prevState: z.inferFlattenedErrors<typeof FirstLoginSchema> | undefined,
   formData: FormData,
-) {
+): Promise<z.inferFlattenedErrors<typeof FirstLoginSchema>> | never {
   const session = await auth()
   const data = {} as Record<string, string>
   formData.forEach((value, key) => (data[key] = value.toString()))

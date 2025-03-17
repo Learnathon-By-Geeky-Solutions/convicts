@@ -5,6 +5,11 @@ import { render, screen } from "@testing-library/react"
 import Page from "@/app/page"
 
 describe("Page component", () => {
+  it("renders intro page unchanged", () => {
+    const { container } = render(<Page />)
+    expect(container).toMatchSnapshot()
+  })
+
   it("renders the logo avatar fallback", () => {
     render(<Page />)
     const avatarFallback = screen.getByText("LOGO")

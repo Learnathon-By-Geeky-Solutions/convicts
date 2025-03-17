@@ -14,6 +14,7 @@ export default function OAuthButtons() {
         await signIn(provider)
       }}
       className="my-9 flex gap-6"
+      aria-label="oauth-buttons"
     >
       <Button
         className="h-auto rounded-xl px-[3.3rem] py-1.5"
