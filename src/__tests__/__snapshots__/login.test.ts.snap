@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginPage renders login page unchanged 1`] = `
+<div>
+  <div
+    class="mx-auto flex w-max max-w-sm flex-col items-center className"
+  >
+    <div
+      class="flex flex-col items-center"
+    >
+      <span
+        class="relative flex shrink-0 overflow-hidden mt-[4rem] aspect-square h-auto w-max rounded-lg border-4 border-zinc-950"
+      >
+        <span
+          class="flex h-full w-full items-center justify-center bg-zinc-100 dark:bg-zinc-800 className rounded-none p-2 indent-[.2em] text-xl tracking-[.2em]"
+        >
+          LOGO
+        </span>
+      </span>
+      <h1
+        class="mt-10 mb-6 indent-[.3em] text-2xl tracking-[.3em] uppercase"
+      >
+        Carlander
+      </h1>
+      <p
+        class="my-6 text-center"
+      >
+        Welcome! Please log in to continue
+        <br />
+        <span
+          class="text-lime-500"
+        >
+          Log in using
+        </span>
+      </p>
+      <form
+        action="javascript:throw new Error('A React form was unexpectedly submitted. If you called form.submit() manually, consider using form.requestSubmit() instead. If you\\'re trying to use event.stopPropagation() in a submit event handler, consider also calling event.preventDefault().')"
+        aria-label="oauth-buttons"
+        class="my-9 flex gap-6"
+      >
+        <button
+          class="inline-flex items-center justify-center gap-2 border-2 border-transparent text-sm font-medium whitespace-nowrap focus-visible:ring-1 focus-visible:ring-zinc-950 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-zinc-300 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-lime-500 text-zinc-50 shadow-xs transition-colors duration-100 hover:border-zinc-950 active:bg-zinc-950 h-auto rounded-xl px-[3.3rem] py-1.5"
+          name="provider"
+          value="google"
+        >
+          <img
+            alt="Sign in with Google"
+            data-nimg="1"
+            decoding="async"
+            height="36"
+            loading="lazy"
+            src="/google_logo.svg"
+            style="color: transparent;"
+            width="37"
+          />
+        </button>
+        <button
+          class="inline-flex items-center justify-center gap-2 border-2 border-transparent text-sm font-medium whitespace-nowrap focus-visible:ring-1 focus-visible:ring-zinc-950 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-zinc-300 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-lime-500 text-zinc-50 shadow-xs transition-colors duration-100 hover:border-zinc-950 active:bg-zinc-950 h-auto rounded-xl px-[3.3rem] py-1.5"
+          name="provider"
+          value="github"
+        >
+          <img
+            alt="Sign in with Github"
+            data-nimg="1"
+            decoding="async"
+            height="37"
+            loading="lazy"
+            src="/github_logo.svg"
+            style="color: transparent;"
+            width="38"
+          />
+        </button>
+      </form>
+    </div>
+    <div
+      class="flex w-xs items-center gap-6"
+    >
+      <div
+        class="bg-zinc-200 dark:bg-zinc-800 h-[1px] w-full shrink border-2 border-lime-500"
+        data-orientation="horizontal"
+        role="none"
+      />
+      or
+      <div
+        class="bg-zinc-200 dark:bg-zinc-800 h-[1px] w-full shrink border-2 border-lime-500"
+        data-orientation="horizontal"
+        role="none"
+      />
+    </div>
+    <form
+      action="javascript:throw new Error('A React form was unexpectedly submitted. If you called form.submit() manually, consider using form.requestSubmit() instead. If you\\'re trying to use event.stopPropagation() in a submit event handler, consider also calling event.preventDefault().')"
+      class="className mt-7 mb-11 flex min-w-xs flex-col gap-7"
+    >
+      <div>
+        <label
+          class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          for="email"
+        >
+          Email Address
+        </label>
+        <input
+          class="flex h-9 w-full bg-transparent px-3 py-1 text-base shadow-xs transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-zinc-950 placeholder:text-zinc-500 focus-visible:ring-1 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50 md:text-sm dark:border-zinc-800 dark:file:text-zinc-50 dark:placeholder:text-zinc-400 dark:focus-visible:ring-zinc-300 mt-2 rounded-lg border-3 border-lime-500 focus-visible:ring-lime-500"
+          id="email"
+          name="email"
+          required=""
+          type="email"
+        />
+      </div>
+      <button
+        class="inline-flex items-center justify-center gap-2 rounded-md border-2 border-transparent text-sm font-medium whitespace-nowrap focus-visible:ring-1 focus-visible:ring-zinc-950 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-zinc-300 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-zinc-950 text-zinc-50 shadow-xs transition-colors duration-100 hover:border-lime-500 active:bg-lime-500 h-9 px-4 py-2 uppercase"
+        type="submit"
+      >
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+`;

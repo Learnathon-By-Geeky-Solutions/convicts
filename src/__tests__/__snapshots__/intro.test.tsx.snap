@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page component renders intro page unchanged 1`] = `
+<div>
+  <div
+    class="mx-auto flex w-max max-w-sm flex-col items-center className"
+  >
+    <div
+      class="flex flex-col items-center"
+    >
+      <span
+        class="relative flex shrink-0 overflow-hidden mt-16 aspect-square h-auto w-max rounded-lg border-4 border-zinc-950"
+      >
+        <span
+          class="flex h-full w-full items-center justify-center bg-zinc-100 dark:bg-zinc-800 className rounded-none p-2 indent-[.2em] text-xl tracking-[.2em]"
+        >
+          LOGO
+        </span>
+      </span>
+      <h1
+        class="mt-10 mb-6 indent-[.3em] text-2xl tracking-[.3em] uppercase"
+      >
+        Carlander
+      </h1>
+      <p>
+        Find, Park, Go! Hassle-free parking at your fingertips.
+      </p>
+      <button
+        class="inline-flex items-center justify-center gap-2 rounded-md border-2 border-transparent text-sm font-medium whitespace-nowrap focus-visible:ring-1 focus-visible:ring-zinc-950 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-zinc-300 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-zinc-950 text-zinc-50 shadow-xs transition-colors duration-100 hover:border-lime-500 active:bg-lime-500 h-9 px-4 py-2 my-16 uppercase"
+      >
+        <a
+          href="/login"
+        >
+          Get Started
+        </a>
+      </button>
+    </div>
+    <div
+      class="shrink-0 bg-zinc-200 dark:bg-zinc-800 h-[1px] w-full w-xs border-2 border-lime-500"
+      data-orientation="horizontal"
+      role="none"
+    />
+    <div
+      class="flex flex-col items-center"
+    >
+      <img
+        alt="a vector art of bangladesh"
+        class="mt-12 mb-8"
+        data-nimg="1"
+        decoding="async"
+        height="219"
+        loading="lazy"
+        src="/bangladesh.svg"
+        style="color: transparent;"
+        width="174"
+      />
+      <p
+        class="mb-16"
+      >
+        50+ parking locations available for booking.
+      </p>
+    </div>
+    <div
+      class="shrink-0 bg-zinc-200 dark:bg-zinc-800 h-[1px] w-full w-xs border-2 border-lime-500"
+      data-orientation="horizontal"
+      role="none"
+    />
+    <div
+      class="flex flex-col items-center"
+    >
+      <img
+        alt="the app can be accessed anytime via any device"
+        class="mt-24 mb-11"
+        data-nimg="1"
+        decoding="async"
+        height="137"
+        loading="lazy"
+        src="/mobile.svg"
+        style="color: transparent;"
+        width="181"
+      />
+      <p
+        class="mb-11"
+      >
+        Book a spot on the go!
+      </p>
+    </div>
+    <div
+      class="shrink-0 bg-zinc-200 dark:bg-zinc-800 h-[1px] w-full w-xs border-2 border-lime-500"
+      data-orientation="horizontal"
+      role="none"
+    />
+    <div
+      class="flex flex-col items-center"
+    >
+      <img
+        alt="the app features multiple payment options"
+        class="mt-20 mb-10"
+        data-nimg="1"
+        decoding="async"
+        height="168"
+        loading="lazy"
+        src="/money.svg"
+        style="color: transparent;"
+        width="178"
+      />
+      <p
+        class="mb-10 text-center"
+      >
+        Multiple payment options including payment apps and card.
+      </p>
+    </div>
+    <div
+      class="shrink-0 bg-zinc-200 dark:bg-zinc-800 h-[1px] w-full w-xs border-2 border-lime-500"
+      data-orientation="horizontal"
+      role="none"
+    />
+    <div
+      class="flex flex-col items-center"
+    >
+      <h2
+        class="mt-16 mb-14 indent-[.3em] text-2xl tracking-[.3em] uppercase"
+      >
+        And more
+      </h2>
+      <a
+        class="inline-flex items-center justify-center gap-2 rounded-md border-2 border-transparent text-sm font-medium whitespace-nowrap focus-visible:ring-1 focus-visible:ring-zinc-950 focus-visible:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-zinc-300 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-zinc-950 text-zinc-50 shadow-xs transition-colors duration-100 hover:border-lime-500 active:bg-lime-500 h-9 px-4 py-2 mb-[8rem] uppercase"
+        href="/login"
+      >
+        Get Started
+      </a>
+    </div>
+  </div>
+</div>
+`;
