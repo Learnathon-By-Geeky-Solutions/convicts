@@ -8,6 +8,7 @@ on:
 jobs:
   sonarqube:
     name: Run SonarQube coverage analysis
+    if: github.actor != "dependabot[bot]"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -27,7 +28,7 @@ jobs:
         run: pnpm install
 
       - name: Prisma Generate
-        run: pnpm exec prisma generate
+        run: pnpm prigen
 
       - name: Run tests
         run: pnpm run test --coverage

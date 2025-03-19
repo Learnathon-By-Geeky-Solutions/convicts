@@ -11,6 +11,7 @@
     "test": "jest --ci",
     "updateSnapshots": "jest --updateSnapshot",
     "prettify": "prettier --write .",
+    "prigen": "prisma generate",
     "supastart": "supabase start",
     "supastop": "supabase stop",
     "emails": "email dev --dir ./src/emails"
